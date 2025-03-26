@@ -34,7 +34,348 @@
       </div>
     </nav>
 
-    <main id="root"></main>
+    <main id="root">
+      <section>
+        <img src="./assets/images/homehero.svg" alt="" class="w-full" />
+      </section>
+
+      <section class="p-[50px]">
+        <div class="bg-[#ba9d3c] text-white py-[30px] px-[60px] flex gap-5">
+          <div class="flex flex-col gap-[16px]">
+            <h1 class="text-2xl font-semibold">Calling All African Artists!</h1>
+            <p class="font-light">
+              Submit Your Music to AFRIMA 2025, be part of Africa's most
+              prestigious music awards. Showcase your talent and stand a chance
+              to be recognized across the continent.
+            </p>
+            <button class="p-[10px] w-[200px] bg-[#3a01ab] uppercase">
+              submit your music
+            </button>
+          </div>
+          <div class="w-[30%] p-3 flex justify-center">
+            <img src="./assets/images/afrimaLogoWhite.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[50px] px-[100px] flex">
+        <div class="flex h-[400px] gap-0">
+          <div
+            class="flex flex-col justify-center w-[60%] bg-gray-200 p-[50px] gap-[16px]"
+          >
+            <div class="">
+              <h1 class="uppercase text-[12px]">
+                Get All the Details About the AFRIMA Event
+              </h1>
+              <h2 class="capitalize text-xl text-[#3A01AB] font-bold">
+                Join Us for the 2025 All Africa Music Awards
+              </h2>
+            </div>
+            <p class="text-gray-500">
+              Get ready for an unforgettable experience at the AFRIMA event!
+              Check out our schedule for a lineup of exciting activities,
+              including the Award Ceremony, Music Festival, Music Business Hub,
+              and more. Secure your spot and be part of the biggest celebration
+              of African music.
+            </p>
+            <button
+              class="p-[10px] text-white w-[200px] bg-[#3a01ab] uppercase"
+            >
+              explore events
+            </button>
+          </div>
+          <div class="">
+            <img
+              src="./assets/images/homeImg1.svg"
+              alt=""
+              class="h-full w-full w-[40%]"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="p-[100px]">
+        <div class="flex text-white h-[560px]">
+          <div
+            class="bg-gradient-to-bl from-[#3A01AB] via-[#953FDC] to-[#170045] w-[60%] flex flex-col h-full justify-center gap-5 p-[40px]"
+          >
+            <p class="text-[12px] uppercase">
+              Join Us for the Grand Celebration of African Music
+            </p>
+            <h1 class="text-[24px] font-bold">Award Ceremony</h1>
+            <p>
+              Be part of the prestigious AFRIMA Award Ceremony. Celebrate the
+              best in African music and witness history in the making.
+            </p>
+            <button
+              class="bg-white w-[150px] uppercase text-[#3a01ab] p-[10px]"
+            >
+              Visit Page
+            </button>
+          </div>
+          <div>
+            <div class="flex">
+              <div><img src="./assets/images/homeImg2.svg" alt="" /></div>
+              <div class="p-[30px] bg-[#3a01ab] flex flex-col gap-5 w-[70%]">
+                <p class="text-[12px] uppercase">
+                  Experience the Vibrant AFRIMA Music Festival
+                </p>
+                <h1 class="text-[24px] font-bold">Music Festival</h1>
+                <p>
+                  Festival Don’t miss electrifying performances from Africa's
+                  top artists. Join us for a vibrant celebration of musical
+                  diversity and talent.
+                </p>
+                <h1 class="uppercase font-semibold">visit page</h1>
+              </div>
+            </div>
+            <div class="flex">
+              <div><img src="./assets/images/homeImg3.svg" alt="" /></div>
+              <div
+                class="p-[30px] bg-gradient-to-br from-[#43C6F3] via-[#953FDC] to-[#43C6F3] flex flex-col gap-5 w-[70%]"
+              >
+                <p class="text-[12px] uppercase">
+                  Experience the Vibrant AFRIMA Music
+                </p>
+                <h1 class="text-[24px] font-bold">Music Business Hub</h1>
+                <p>
+                  Network and Grow at the AFRIMA Music Business Hub. Join us for
+                  workshops, panels, and networking sessions.
+                </p>
+                <h1 class="uppercase font-semibold">visit page</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-[100px] flex-col flex gap-10 bg-gray-200">
+        <div>
+          <p class="uppercase text-[12px]">
+            Explore the Nominees, Winners, and Categories
+          </p>
+          <h1 class="capitalize text-[24px] text-[#3A01AB] font-bold">
+            Discover the Best in African Music
+          </h1>
+        </div>
+
+        <div class="flex justify-center gap-10 text-white">
+          <!-- Gradient Background (Clickable & Hoverable) -->
+          <div
+            class="relative group h-[350px] w-[300px] bg-gradient-to-bl from-[#43C6F3] via-[#953FDC] to-[#43C6F3] flex flex-col p-[30px] justify-end cursor-pointer"
+          >
+            <h1 class="text-[24px] font-bold">Artist of the Year</h1>
+            <div class="h-[2px] bg-white"></div>
+
+            <!-- Nominee Card (Initially Hidden) -->
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-white p-5 text-black rounded-lg shadow-lg opacity-0 scale-95 transition-all duration-300 group-hover:opacity-100 group-hover:scale-90 hidden group-hover:flex"
+              onclick="this.classList.toggle('hidden')"
+            >
+              <div>
+                <h3 class="text-lg font-bold text-[#3A01AB] border-b pb-1">
+                  Nominees
+                </h3>
+                <ul class="mt-2 space-y-2 text-gray-700">
+                  <li>
+                    <span class="font-bold text-[#3A01AB]"
+                      >Blood on the dance floor</span
+                    ><br /><span class="font-semibold text-yellow-600"
+                      >OdumoduBlack (Nigeria)</span
+                    >
+                  </li>
+                  <li>
+                    <span class="font-bold text-[#3A01AB]">Aye</span><br /><span
+                      class="font-semibold text-yellow-600"
+                      >Davido (Nigeria)</span
+                    >
+                  </li>
+                  <li>
+                    <span class="font-bold text-[#3A01AB]">Holy Ghost</span
+                    ><br /><span class="font-semibold text-yellow-600"
+                      >Omah Lay (Nigeria)</span
+                    >
+                  </li>
+                  <li>
+                    <span class="font-bold text-[#3A01AB]">Mateverse</span
+                    ><br /><span class="font-semibold text-yellow-600"
+                      >Olamide (Nigeria)</span
+                    >
+                  </li>
+                  <li>
+                    <span class="font-bold text-[#3A01AB]">Big 7</span
+                    ><br /><span class="font-semibold text-yellow-600"
+                      >Burna Boy (Nigeria)</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative group h-[350px] w-[300px] bg-gradient-to-bl from-[#43C6F3] via-[#953FDC] to-[#43C6F3] flex flex-col p-[30px] justify-end cursor-pointer"
+          >
+            <h1 class="text-[24px] font-bold">Artist of the Year</h1>
+            <div class="h-[2px] bg-white"></div>
+
+            <!-- Nominee Card (Initially Hidden) -->
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-white p-5 text-black rounded-lg shadow-lg opacity-0 scale-95 transition-all duration-300 group-hover:opacity-100 group-hover:scale-90 hidden group-hover:flex"
+              onclick="this.classList.toggle('hidden')"
+            >
+              <div>
+                <h3 class="text-lg font-bold text-[#3A01AB] border-b pb-1">
+                  Nominees
+                </h3>
+                <ul class="mt-2 space-y-2 text-gray-700">
+                  <li>
+                    <span class="font-bold text-[#3A01AB]"
+                      >Blood on the dance floor</span
+                    ><br /><span class="font-semibold text-yellow-600"
+                      >OdumoduBlack (Nigeria)</span
+                    >
+                  </li>
+                  <li>
+                    <span class="font-bold text-[#3A01AB]">Aye</span><br /><span
+                      class="font-semibold text-yellow-600"
+                      >Davido (Nigeria)</span
+                    >
+                  </li>
+                  <li>
+                    <span class="font-bold text-[#3A01AB]">Holy Ghost</span
+                    ><br /><span class="font-semibold text-yellow-600"
+                      >Omah Lay (Nigeria)</span
+                    >
+                  </li>
+                  <li>
+                    <span class="font-bold text-[#3A01AB]">Mateverse</span
+                    ><br /><span class="font-semibold text-yellow-600"
+                      >Olamide (Nigeria)</span
+                    >
+                  </li>
+                  <li>
+                    <span class="font-bold text-[#3A01AB]">Big 7</span
+                    ><br /><span class="font-semibold text-yellow-600"
+                      >Burna Boy (Nigeria)</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative group h-[350px] w-[300px] bg-gradient-to-bl from-[#43C6F3] via-[#953FDC] to-[#43C6F3] flex flex-col p-[30px] justify-end cursor-pointer"
+          >
+            <h1 class="text-[24px] font-bold">Artist of the Year</h1>
+            <div class="h-[2px] bg-white"></div>
+
+            <!-- Nominee Card (Initially Hidden) -->
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-white p-5 text-black rounded-lg shadow-lg opacity-0 scale-95 transition-all duration-300 group-hover:opacity-100 group-hover:scale-90 hidden group-hover:flex"
+              onclick="this.classList.toggle('hidden')"
+            >
+              <div>
+                <h3 class="text-lg font-bold text-purple-800 border-b pb-1">
+                  Nominees
+                </h3>
+                <ul class="mt-2 space-y-2 text-gray-700">
+                  <li>
+                    <span class="font-bold text-purple-800"
+                      >Blood on the dance floor</span
+                    ><br /><span class="font-semibold text-yellow-600"
+                      >OdumoduBlack (Nigeria)</span
+                    >
+                  </li>
+                  <li>
+                    <span class="font-bold text-purple-800">Aye</span
+                    ><br /><span class="font-semibold text-yellow-600"
+                      >Davido (Nigeria)</span
+                    >
+                  </li>
+                  <li>
+                    <span class="font-bold text-purple-800">Holy Ghost</span
+                    ><br /><span class="font-semibold text-yellow-600"
+                      >Omah Lay (Nigeria)</span
+                    >
+                  </li>
+                  <li>
+                    <span class="font-bold text-purple-800">Mateverse</span
+                    ><br /><span class="font-semibold text-yellow-600"
+                      >Olamide (Nigeria)</span
+                    >
+                  </li>
+                  <li>
+                    <span class="font-bold text-purple-800">Big 7</span
+                    ><br /><span class="font-semibold text-yellow-600"
+                      >Burna Boy (Nigeria)</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <button class="p-[10px] text-white w-[200px] bg-[#3a01ab] uppercase">
+            explore awards
+          </button>
+        </div>
+      </section>
+
+      <section class="py-[50px] px-[100px] flex">
+        <div class="flex h-[400px] gap-0">
+          <div
+            class="flex flex-col justify-center w-[60%] bg-gray-200 p-[50px] gap-[16px]"
+          >
+            <div class="">
+              <h1 class="uppercase text-[12px]">
+                Our Mission, Vision, Team, and Partners
+              </h1>
+              <h2 class="capitalize text-xl text-[#3A01AB] font-bold">
+                Celebrating African Music and Talent
+              </h2>
+            </div>
+            <p class="text-gray-500">
+              Welcome to the official site of the All Africa Music Awards
+              (AFRIMA), where we celebrate the vibrant and diverse music talent
+              across Africa. Our mission is to honor the best in African music,
+              recognizing the creativity, cultural heritage, and impact of
+              artists from all corners of the continent.
+            </p>
+            <button
+              class="p-[10px] text-white w-[200px] text-[13px] bg-[#3a01ab] uppercase"
+            >
+              Explore More about us
+            </button>
+          </div>
+          <div class="">
+            <img
+              src="./assets/images/homeImg4.svg"
+              alt=""
+              class="h-full w-full w-[40%]"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="flex gap-5 bg-[#ba9d3c] p-[100px] text-white">
+        <div class="w-[60%]">
+          <p class="uppercase text-[12px]">We're Here to Help</p>
+          <h1 class="text-[40px] font-bold">Get in Touch with Us</h1>
+        </div>
+        <div class="w-[40%] flex flex-col gap-5">
+          <p>
+            Have questions or need more information? Fill out our inquiry form
+            or find our contact details here. We’re here to help and would love
+            to hear from you.
+          </p>
+          <button class="p-[10px] text-white w-[200px] bg-[#3a01ab] uppercase">
+            contact us
+          </button>
+        </div>
+      </section>
+    </main>
 
     <footer class="flex flex-col gap-14 p-20">
       <div class="flex items-center gap-10">
