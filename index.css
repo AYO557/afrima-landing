@@ -1,3 +1,13 @@
 body {
   font-family: Helvetica, "Poppins", sans-serif;
 }
+
+.current-page {
+  color: #3a01ab;
+  border: 1px solid;
+  padding: 2px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

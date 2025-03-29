@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nominee Card Hover & Click</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/66c56c7221.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="flex justify-center items-center min-h-screen bg-gray-100">
+    <div class="flex gap-10 text-white">
+      <!-- Gradient Background (Clickable & Hoverable) -->
+      <div
+        class="relative group h-[350px] w-[300px] bg-gradient-to-bl from-[#43C6F3] via-[#953FDC] to-[#43C6F3] flex flex-col p-[30px] justify-end cursor-pointer"
+      >
+        <h1 class="text-[24px] font-bold">Artist of the Year</h1>
+        <div class="h-[2px] bg-white"></div>
+
+        <!-- Nominee Card (Initially Hidden but with Transition) -->
+        <div
+          id="nomineeCard"
+          class="absolute top-0 left-0 w-full h-full bg-white p-5 text-black rounded-lg shadow-lg opacity-0 scale-95 pointer-events-none transition-all duration-300 ease-in-out"
+        >
+          <div>
+            <h3 class="text-lg font-bold text-purple-800 border-b pb-1">
+              Nominees
+            </h3>
+            <ul class="mt-2 space-y-2 text-gray-700">
+              <li>
+                <span class="font-bold">Blood on the dance floor</span
+                ><br /><span class="font-semibold text-yellow-600"
+                  >OdumoduBlack</span
+                >
+                (Nigeria)
+              </li>
+              <li>
+                <span class="font-bold">Aye</span><br /><span
+                  class="font-semibold text-yellow-600"
+                  >Davido</span
+                >
+                (Nigeria)
+              </li>
+              <li>
+                <span class="font-bold">Holy Ghost</span><br /><span
+                  class="font-semibold text-yellow-600"
+                  >Omah Lay</span
+                >
+                (Nigeria)
+              </li>
+              <li>
+                <span class="font-bold">Mateverse</span><br /><span
+                  class="font-semibold text-yellow-600"
+                  >Olamide</span
+                >
+                (Nigeria)
+              </li>
+              <li>
+                <span class="font-bold">Big 7</span><br /><span
+                  class="font-semibold text-yellow-600"
+                  >Burna Boy</span
+                >
+                (Nigeria)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const nomineeCard = document.getElementById("nomineeCard");
+      const cardContainer = nomineeCard.parentElement;
+
+      cardContainer.addEventListener("mouseenter", () => {
+        nomineeCard.classList.remove(
+          "opacity-0",
+          "scale-95",
+          "pointer-events-none"
+        );
+        nomineeCard.classList.add(
+          "opacity-100",
+          "scale-90",
+          "pointer-events-auto"
+        );
+      });
+
+      cardContainer.addEventListener("mouseleave", () => {
+        nomineeCard.classList.add(
+          "opacity-0",
+          "scale-95",
+          "pointer-events-none"
+        );
+        nomineeCard.classList.remove(
+          "opacity-100",
+          "scale-100",
+          "pointer-events-auto"
+        );
+      });
+
+      nomineeCard.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevent closing when clicking inside the card
+        nomineeCard.classList.add(
+          "opacity-0",
+          "scale-95",
+          "pointer-events-none"
+        );
+        nomineeCard.classList.remove(
+          "opacity-100",
+          "scale-100",
+          "pointer-events-auto"
+        );
+      });
+    </script>
+  </body>
+</html>

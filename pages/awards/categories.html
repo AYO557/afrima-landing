@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/66c56c7221.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="flex justify-between px-4 shadow-md text-[#3A01AB]">
+      <div class="flex gap-4">
+        <button>
+          <img src="../../assets/icons/menu.svg" alt="" />
+        </button>
+        <img src="../../assets/icons/afrima_logo.svg" alt="" />
+      </div>
+
+      <div class="flex gap-4 items-center">
+        <button class="border-x border-gray-300 px-7 h-full hidden lg:flex">
+          <img src="../../assets/icons/search.svg" alt="" />
+        </button>
+
+        <button class="flex items-center gap-2 text-base font-bold px-5">
+          <span>English</span>
+          <span>
+            <img src="../../assets/icons/angle_down.svg" alt="" />
+          </span>
+        </button>
+      </div>
+    </nav>
+
+    <main id="root">
+      <section
+        class="flex flex-col justify-center items-center gap-3 h-[300px] bg-gradient-to-br from-[#FFEC9A] via-[#953FDC] to-[#FFEC9A]"
+      >
+        <div>
+          <img src="../../assets/images/afrimaLogoWhite.svg" alt="" />
+        </div>
+        <div class="text-[24px] font-semibold uppercase text-white">Awards</div>
+      </section>
+
+      <section class="py-[16px] bg-gray-200">
+        <nav>
+          <ul
+            class="uppercase flex overflow-x-scroll w-full gap-5 lg:overflow-x-none"
+          >
+            <a href="../awards/categories.html"
+              ><li
+                class="text-[12px] hover:text-[#3A01AB] w-[200px] nav-link lg:text-[16px]"
+              >
+                Categories
+              </li></a
+            >
+            <a href="../awards/nominees.html"
+              ><li
+                class="text-[12px] hover:text-[#3A01AB] w-[200px] nav-link lg:text-[16px]"
+              >
+                2025 Nominees
+              </li></a
+            >
+            <a href="../awards/winners.html"
+              ><li
+                class="text-[12px] hover:text-[#3A01AB] w-[200px] nav-link lg:text-[16px]"
+              >
+                how Winners emerge
+              </li></a
+            >
+            <a href="../awards/pastWinners.html"
+              ><li
+                class="text-[12px] hover:text-[#3A01AB] w-[200px] nav-link lg:text-[16px]"
+              >
+                past winners
+              </li></a
+            >
+          </ul>
+          <!-- <div class="uppercase flex overflow-x-scroll gap-[300px] w-full">
+            <div class="w-[50%]"><a href=""> categories</a></div>
+            <div class="w-[50%]"><a href=""> nominees</a></div>
+            <div class="w-[50%]"><a href="">how winners emerge</a></div>
+            <div class="w-[50%]"><a href=""> past winners</a></div>
+          </div> -->
+        </nav>
+      </section>
+
+      <section class="px-[16px] py-[30px]">
+        <div>
+          <h1 class="font-bold capitalize text-[#3A01AB] text-[32px]">
+            categories
+          </h1>
+        </div>
+      </section>
+
+      <section
+        class="py-[64px] px-[24px] bg-gray-200 flex flex-col lg:grid lg:grid-cols-2"
+      >
+        <div>
+          <h1 class="text-[24px] font-[500] text-[#3A01AB]">Regional Awards</h1>
+          <ol class="text-[12px] text-[#ba9d3c] list-decimal">
+            <li>Best Female Artiste in Central Africa</li>
+            <li>Best Male Artiste in Central Africa</li>
+            <li>Best Female Artiste in Western Africa</li>
+            <li>Best Male Artiste in Western Africa</li>
+            <li>Best Female Artiste in Eastern Africa</li>
+            <li>Best Male Artiste in Eastern Africa</li>
+            <li>Best Female Artiste in Northern Africa</li>
+            <li>Best Male Artiste in Northern Africa</li>
+            <li>Best Female Artiste in Southern Africa</li>
+            <li>Best Male Artiste in Southern Africa</li>
+          </ol>
+        </div>
+        <div>
+          <h1 class="text-[24px] font-[500] text-[#3A01AB]">
+            Continental awards
+          </h1>
+          <ol class="text-[12px] text-[#ba9d3c] list-decimal">
+            <li>Artiste of the Year</li>
+            <li>African Fans' Favorite</li>
+            <li>Album of the Year</li>
+            <li>Best African Collaboration</li>
+            <li>Best African Contemporary</li>
+            <li>Best African Electro</li>
+            <li>Best African Group/Duo/Band</li>
+            <li>Best African Hip Hop</li>
+            <li>Best African Jazz</li>
+            <li>Best African Pop</li>
+            <li>Best African Reggae/Ragga/Dancehall</li>
+            <li>Best African RnB/Soul</li>
+            <li>Best African Rock</li>
+            <li>Best African Traditional</li>
+            <li>Best Female Inspirational</li>
+            <li>Best Male Inspirational</li>
+            <li>Best African DJ</li>
+            <li>Best African Lyricist/Rapper</li>
+            <li>Best African Act in Diaspora</li>
+            <li>Best African Dance/Choreography</li>
+            <li>AFRIMA Legend Award</li>
+            <li>Most Promising Artiste of the Year</li>
+            <li>Producer of the Year</li>
+            <li>Revelation of the African Continent</li>
+            <li>Song of the Year</li>
+            <li>Songwriter of the Year</li>
+            <li>Video of the Year</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+    <footer class="flex flex-col gap-14 p-10 lg:p-20">
+      <div class="flex items-center gap-10">
+        <h3 class="font-bold">FOLLOW US</h3>
+
+        <div class="flex gap-4 items-center">
+          <span>
+            <img src="../../assets/icons/tiktok.svg" alt="" />
+          </span>
+          <span>
+            <img src="../../assets/icons/facebook.svg" alt="" />
+          </span>
+          <span>
+            <img src="../../assets/icons/twitter.svg" alt="" />
+          </span>
+          <span>
+            <img src="../../assets/icons/instagram.svg" alt="" />
+          </span>
+          <span>
+            <img src="../../assets/icons/youtube.svg" alt="" />
+          </span>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-5">
+        <div class="lg:flex items-center gap-10">
+          <h4 class="font-medium">2024 Afrima Awards</h4>
+
+          <ul
+            class="flex items-center gap-[8px] text-[12px] lg:text-[16px] text-gray-500"
+          >
+            <a href="../about.html"
+              ><li class="hover:text-[#3A01AB]">About US</li></a
+            >
+            <a href="../awards/categories.html"
+              ><li class="hover:text-[#3A01AB]">Awards</li></a
+            >
+
+            <li>Events</li>
+            <li>Media</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <p
+            class="text-gray-500 text-[12px] tracking-wide w-[95%] lg:text-[16px]"
+          >
+            All Africa Music Awards (AFRIMA) is committed to promoting
+            diversity, equity, and inclusion. We celebrate and honor the
+            creativity and talent of African artists without discrimination
+            based on race, color, age, religion, sex, sexual orientation, gender
+            identity/expression, national origin, or any other characteristic
+            protected under applicable law. We believe in fostering an inclusive
+            environment where all artists can thrive and contribute to the
+            vibrant cultural heritage of Africa.
+          </p>
+          <p class="font-medium">&copy; Created by Juthbag</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+        const currentPage =
+          window.location.pathname.split("/").pop() || "categories.html";
+        navLinks.forEach((link) => {
+          const linkPage = link.getAttribute("href");
+          if (linkPage === currentPage) {
+            link.classList.add("current-page");
+          } else {
+            link.classList.remove("current-page");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
