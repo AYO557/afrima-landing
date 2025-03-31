@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
+    <style>
+      /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for Firefox */
+      .hide-scrollbar {
+        scrollbar-width: none;
+      }
+    </style>
     <script src="index.js" type="module" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script
@@ -45,46 +56,32 @@
         <div class="text-[24px] font-semibold uppercase text-white">Awards</div>
       </section>
 
-      <section class="py-[16px] bg-gray-200">
+      <section class="py-[16px] pl-[10px] bg-gray-200 lg:pl-0">
         <nav>
           <ul
-            class="uppercase flex overflow-x-scroll w-full gap-5 lg:overflow-x-none"
+            class="uppercase flex overflow-x-scroll hide-scrollbar w-full gap-3 text-[12px] md:text-[16px] lg:overflow-x-none md:justify-center lg:gap-[15px]"
           >
-            <a href="../awards/categories.html"
-              ><li
-                class="text-[12px] hover:text-[#3A01AB] w-[200px] nav-link lg:text-[16px]"
-              >
-                Categories
-              </li></a
+            <a
+              href="../awards/categories.html"
+              class="hover:text-[#3A01AB] nav-link lg:text-[16px]"
+              ><li>Categories</li></a
             >
-            <a href="../awards/nominees.html"
-              ><li
-                class="text-[12px] hover:text-[#3A01AB] w-[200px] nav-link lg:text-[16px]"
-              >
-                2025 Nominees
-              </li></a
+            <a
+              href="../awards/nominees.html"
+              class="hover:text-[#3A01AB] nav-link lg:text-[16px]"
+              ><li>2025 Nominees</li></a
             >
-            <a href="../awards/winners.html"
-              ><li
-                class="text-[12px] hover:text-[#3A01AB] w-[200px] nav-link lg:text-[16px]"
-              >
-                how Winners emerge
-              </li></a
+            <a
+              href="../awards/winners.html"
+              class="hover:text-[#3A01AB] nav-link lg:text-[16px]"
+              ><li class="flex">how Winners emerge</li></a
             >
-            <a href="../awards/pastWinners.html"
-              ><li
-                class="text-[12px] hover:text-[#3A01AB] w-[200px] nav-link lg:text-[16px]"
-              >
-                past winners
-              </li></a
+            <a
+              href="../awards/pastWinners.html"
+              class="hover:text-[#3A01AB] nav-link lg:text-[16px]"
+              ><li>past winners</li></a
             >
           </ul>
-          <!-- <div class="uppercase flex overflow-x-scroll gap-[300px] w-full">
-            <div class="w-[50%]"><a href=""> categories</a></div>
-            <div class="w-[50%]"><a href=""> nominees</a></div>
-            <div class="w-[50%]"><a href="">how winners emerge</a></div>
-            <div class="w-[50%]"><a href=""> past winners</a></div>
-          </div> -->
         </nav>
       </section>
 
@@ -97,11 +94,13 @@
       </section>
 
       <section
-        class="py-[64px] px-[24px] bg-gray-200 flex flex-col lg:grid lg:grid-cols-2"
+        class="py-[64px] px-[24px] bg-gray-200 flex flex-col gap-[30px] lg:grid lg:grid-cols-2"
       >
         <div>
           <h1 class="text-[24px] font-[500] text-[#3A01AB]">Regional Awards</h1>
-          <ol class="text-[12px] text-[#ba9d3c] list-decimal">
+          <ol
+            class="text-[12px] text-[#ba9d3c] list-decimal px-[24px] md:text-[16px]"
+          >
             <li>Best Female Artiste in Central Africa</li>
             <li>Best Male Artiste in Central Africa</li>
             <li>Best Female Artiste in Western Africa</li>
@@ -118,7 +117,9 @@
           <h1 class="text-[24px] font-[500] text-[#3A01AB]">
             Continental awards
           </h1>
-          <ol class="text-[12px] text-[#ba9d3c] list-decimal">
+          <ol
+            class="text-[12px] text-[#ba9d3c] list-decimal px-[24px] md:text-[16px]"
+          >
             <li>Artiste of the Year</li>
             <li>African Fans' Favorite</li>
             <li>Album of the Year</li>
@@ -211,16 +212,18 @@
       </div>
     </footer>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(".nav-link");
-        const currentPage =
-          window.location.pathname.split("/").pop() || "categories.html";
-        navLinks.forEach((link) => {
-          const linkPage = link.getAttribute("href");
-          if (linkPage === currentPage) {
-            link.classList.add("current-page");
-          } else {
-            link.classList.remove("current-page");
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPage = window.location.pathname
+          .split("/")
+          .pop()
+          .toLowerCase();
+
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          if (
+            link.getAttribute("href")?.split("/").pop().toLowerCase() ===
+            currentPage
+          ) {
+            link.classList.add("text-[#3A01AB]");
           }
         });
       });

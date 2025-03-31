@@ -12,16 +12,17 @@
     ></script>
   </head>
   <body>
-    <nav class="flex justify-between px-4 shadow-md text-[#3A01AB]">
-      <div class="flex gap-4">
-        <button>
-          <img src="./assets/icons/menu.svg" alt="" />
-        </button>
-        <img src="./assets/icons/afrima_logo.svg" alt="" />
-      </div>
+    <nav
+      class="flex justify-between items-center px-4 shadow-md text-[#3A01AB]"
+    >
+      <button>
+        <img src="./assets/icons/menu.svg" alt="" />
+      </button>
+
+      <div><img src="./assets/icons/afrima_logo.svg" alt="" /></div>
 
       <div class="flex gap-4 items-center">
-        <button class="border-x border-gray-300 px-7 h-full">
+        <button class="border-x border-gray-300 px-7 h-full hidden md:flex">
           <img src="./assets/icons/search.svg" alt="" />
         </button>
 
@@ -36,7 +37,24 @@
 
     <main id="root">
       <section>
-        <img src="./assets/images/homehero.svg" alt="" class="w-full" />
+        <div class="hidden md:flex">
+          <img src="./assets/images/homehero.svg" alt="" class="w-full" />
+        </div>
+        <div class="md:hidden">
+          <img
+            src="./assets/images/AFRIMA_hero_mobile.svg"
+            alt=""
+            class="w-full"
+          />
+          <div class="uppercase absolute p-[16px] top-[200px]">
+            <p class="text-[12px] text-[#E3DAB8]">AFRIMA Awards</p>
+            <h1 class="text-[32px] text-[#BA9D36] font-bold">
+              Discover the <br />
+              Best in African <br />
+              Music
+            </h1>
+          </div>
+        </div>
       </section>
 
       <section class="px-[16px] py-[64px] lg:px-[100px]">
