@@ -1,0 +1,112 @@
+const menuElem = document.querySelector("#menu");
+const navOverlayElem = document.querySelector("#nav-overlay");
+
+// Select all nav links and menu elements
+const navLinks = document.querySelectorAll("#nav-overlay menu li");
+const menus = document.querySelectorAll("#nav-overlay menu[id$='_menu']");
+
+// nav subjects
+const navSubjects = document.querySelectorAll("#intro-subjects > div");
+
+//
+const languageBtn = document.querySelector("#language-btn");
+const languageDropdown = document.querySelector("#language-dropdown");
+
+//! events
+//* toggle nav overlay and menu icons
+let showOverlay = false;
+menuElem.addEventListener("click", () => {
+  showOverlay = !showOverlay;
+  if (showOverlay) {
+    navOverlayElem.classList.add("h-[90vh]");
+    navOverlayElem.classList.remove("h-0");
+
+    menuElem.querySelector("img:nth-child(1)").classList.add("hidden");
+    menuElem.querySelector("img:nth-child(2)").classList.remove("hidden");
+  } else {
+    navOverlayElem.classList.remove("h-[90vh]");
+    navOverlayElem.classList.add("h-0");
+
+    menuElem.querySelector("img:nth-child(1)").classList.remove("hidden");
+    menuElem.querySelector("img:nth-child(2)").classList.add("hidden");
+  }
+});
+
+//* Add event listeners to each nav link
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", () => {
+    navLinks.forEach((link) => {
+      link.classList.toggle("active-link", link === navLink);
+    });
+
+    const menuId = `${navLink.id}_menu`;
+    switchMenu(menuId);
+    switchSubject(menuId);
+  });
+});
+
+//* toggle language dropdown event
+let showLanguageDropdown = false;
+languageBtn.addEventListener("click", () => {
+  showLanguageDropdown = !showLanguageDropdown;
+  if (showLanguageDropdown) {
+    languageDropdown.classList.remove("h-0");
+    languageDropdown.classList.add("h-full");
+  } else {
+    languageDropdown.classList.remove("h-full");
+    languageDropdown.classList.add("h-0");
+  }
+});
+
+//! utils
+//* Function to handle menu switching
+function switchMenu(selectedMenuId) {
+  menus.forEach((menu) => {
+    if (menu.id !== selectedMenuId) {
+      menu.classList.add("opacity-0");
+      menu.classList.add("invisible");
+
+      setTimeout(() => {
+        menu.classList.add("hidden");
+      }, 500);
+    } else {
+      menu.classList.remove("opacity-0");
+      menu.classList.remove("invisible");
+
+      setTimeout(() => {
+        menu.classList.remove("hidden");
+      }, 500);
+    }
+  });
+}
+
+//* Function to handle nav subjects
+function switchSubject(selectedMenuId) {
+  navSubjects.forEach((subject) => {
+    let matchId = selectedMenuId.split("_")[0];
+
+    if (matchId.includes("-")) {
+      matchId = matchId.split("-")[0];
+    }
+
+    console.log(matchId);
+
+    if (!subject.id.includes(matchId)) {
+      subject.classList.add("opacity-0");
+      subject.classList.add("invisible");
+
+      setTimeout(() => {
+        subject.classList.add("hidden");
+      }, 500);
+    } else {
+      subject.classList.remove("opacity-0");
+      subject.classList.remove("invisible");
+
+      setTimeout(() => {
+        subject.classList.remove("hidden");
+      }, 500);
+    }
+  });
+}
+
+//#00000026

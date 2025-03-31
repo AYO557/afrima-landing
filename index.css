@@ -11,3 +11,7 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.active-link {
+  background-color: #00000026;
+}
