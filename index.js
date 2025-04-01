@@ -12,6 +12,10 @@ const navSubjects = document.querySelectorAll("#intro-subjects > div");
 const languageBtn = document.querySelector("#language-btn");
 const languageDropdown = document.querySelector("#language-dropdown");
 
+//
+const navSearchBtn = document.querySelector("#nav-search-btn");
+const menuSearchBtn = document.querySelector("#menu-search-btn");
+
 //! events
 //* toggle nav overlay and menu icons
 let showOverlay = false;
@@ -23,12 +27,22 @@ menuElem.addEventListener("click", () => {
 
     menuElem.querySelector("img:nth-child(1)").classList.add("hidden");
     menuElem.querySelector("img:nth-child(2)").classList.remove("hidden");
+
+    navSearchBtn.classList.add("opacity-0");
+
+    menuSearchBtn.classList.remove("opacity-0");
+    menuSearchBtn.classList.add("opacity-full");
   } else {
     navOverlayElem.classList.remove("h-[90vh]");
     navOverlayElem.classList.add("h-0");
 
     menuElem.querySelector("img:nth-child(1)").classList.remove("hidden");
     menuElem.querySelector("img:nth-child(2)").classList.add("hidden");
+
+    navSearchBtn.classList.add("opacity-full");
+    navSearchBtn.classList.remove("opacity-0");
+
+    menuSearchBtn.classList.add("opacity-0");
   }
 });
 
