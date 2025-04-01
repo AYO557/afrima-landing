@@ -15,7 +15,7 @@
     <nav
       class="relative flex items-center justify-between shadow-md text-[#3A01AB] h-[10vh]"
     >
-      <div class="flex gap-10">
+      <div class="flex gap-10 items-center">
         <button
           id="menu"
           class="cursor-pointer h-20 w-20 flex justify-center items-center"
@@ -24,11 +24,33 @@
           <img class="hidden" src="./assets/icons/x.svg" alt="" />
         </button>
         <img src="./assets/icons/afrima_logo.svg" alt="" />
+
+        <button
+          id="menu-search-btn"
+          class="h-[3rem] flex items-center gap-5 opacity-0 transition-all duration-200"
+        >
+          <img src="./assets/icons/search.svg" alt="search icon" />
+          <input
+            type="search"
+            placeholder="Type to search"
+            class="w-[12rem] px-1 outline-none border-none"
+          />
+        </button>
       </div>
 
       <div class="flex items-center h-full">
-        <button id="search" class="border-x border-gray-300 px-7 h-full">
-          <img src="./assets/icons/search.svg" alt="" />
+        <button
+          id="nav-search-btn"
+          class="border-x border-gray-300 px-7 h-full flex gap-1 items-center btn-hover transition-all duration-200"
+          onmouseover="this.querySelector('input').style.width = '12rem'"
+        >
+          <img class="" src="./assets/icons/search.svg" alt="" />
+          <input
+            class="px-2 min-h-[2rem] border-none outline-none w-0 transition-all duration-200"
+            type="search"
+            onfocus="this.style.width = '12rem'"
+            onblur="this.style.width = '0'"
+          />
         </button>
 
         <button
@@ -270,13 +292,13 @@
                 unite, inspire, and drive positive change.
               </p>
 
-              <span>
+              <a href="pages/about.html">
                 <button
                   class="bg-[#3A01AB] py-4 px-10 text-white rounded-lg font-bold"
                 >
                   Visit Page
                 </button>
-              </span>
+              </a>
             </div>
           </div>
         </div>
@@ -285,7 +307,24 @@
 
     <main id="root">
       <section>
-        <img src="./assets/images/homehero.svg" alt="" class="w-full" />
+        <div class="hidden md:flex">
+          <img src="./assets/images/homehero.svg" alt="" class="w-full" />
+        </div>
+        <div class="md:hidden">
+          <img
+            src="./assets/images/AFRIMA_hero_mobile.svg"
+            alt=""
+            class="w-full"
+          />
+          <div class="uppercase absolute p-[16px] top-[200px]">
+            <p class="text-[12px] text-[#E3DAB8]">AFRIMA Awards</p>
+            <h1 class="text-[32px] text-[#BA9D36] font-bold">
+              Discover the <br />
+              Best in African <br />
+              Music
+            </h1>
+          </div>
+        </div>
       </section>
 
       <section class="px-[16px] py-[64px] lg:px-[100px]">

@@ -11,6 +11,17 @@
       src="https://kit.fontawesome.com/66c56c7221.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for Firefox */
+      .hide-scrollbar {
+        scrollbar-width: none;
+      }
+    </style>
   </head>
   <body>
     <nav class="flex justify-between px-4 shadow-md text-[#3A01AB]">
@@ -45,36 +56,30 @@
         <div class="text-[24px] font-semibold uppercase text-white">Awards</div>
       </section>
 
-      <section class="py-[16px] bg-gray-200">
+      <section class="py-[16px] pl-[10px] bg-gray-200 lg:pl-0">
         <nav>
-          <ul class="uppercase flex overflow-x-auto gap-3">
-            <a href="../awards/categories.html"
-              ><li
-                class="text-[12px] hover:text-[#3A01AB] nav-link lg:text-[16px]"
-              >
-                Categories
-              </li></a
+          <ul
+            class="uppercase flex overflow-x-scroll hide-scrollbar w-full gap-3 text-[12px] md:text-[16px] lg:overflow-x-none md:justify-center lg:gap-[15px]"
+          >
+            <a
+              href="../awards/categories.html"
+              class="hover:text-[#3A01AB] nav-link lg:text-[16px]"
+              ><li>Categories</li></a
             >
-            <a href="../awards/nominees.html"
-              ><li
-                class="text-[12px] hover:text-[#3A01AB] nav-link lg:text-[16px]"
-              >
-                2025 Nominees
-              </li></a
+            <a
+              href="../awards/nominees.html"
+              class="hover:text-[#3A01AB] nav-link lg:text-[16px]"
+              ><li>2025 Nominees</li></a
             >
-            <a href="../awards/winners.html"
-              ><li
-                class="text-[12px] hover:text-[#3A01AB] nav-link lg:text-[16px]"
-              >
-                how Winners emerge
-              </li></a
+            <a
+              href="../awards/winners.html"
+              class="hover:text-[#3A01AB] nav-link lg:text-[16px]"
+              ><li class="flex">how Winners emerge</li></a
             >
-            <a href="../awards/pastWinners.html"
-              ><li
-                class="text-[12px] hover:text-[#3A01AB] nav-link lg:text-[16px]"
-              >
-                past winners
-              </li></a
+            <a
+              href="../awards/pastWinners.html"
+              class="hover:text-[#3A01AB] nav-link lg:text-[16px]"
+              ><li>past winners</li></a
             >
           </ul>
         </nav>
@@ -88,9 +93,14 @@
         </div>
       </section>
 
-      <section>
-        <div><img src="" alt="" /></div>
-        <div class="text-[12px] lg:text-[16px] p-[16px] flex flex-col gap-3">
+      <section class="p-[16px] lg:px-[120px]">
+        <div class="flex justify-center md:hidden">
+          <img src="../../assets/images/AFRIMA_trophy_mobile.svg" alt="" />
+        </div>
+        <div class="hidden md:flex md:justify-center">
+          <img src="../../assets/images/AFRIMA_trophy_desktop.svg" alt="" />
+        </div>
+        <div class="text-[12px] md:text-[16px] p-[16px] flex flex-col gap-3">
           <p>
             The AFRIMA annual adjudication calendar commences with the Call for
             Entry process where Artistes, Songwriters, Video Directors, Music
@@ -217,5 +227,22 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPage = window.location.pathname
+          .split("/")
+          .pop()
+          .toLowerCase();
+
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          if (
+            link.getAttribute("href")?.split("/").pop().toLowerCase() ===
+            currentPage
+          ) {
+            link.classList.add("text-[#3A01AB]");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
