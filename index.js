@@ -16,6 +16,8 @@ const languageDropdown = document.querySelector("#language-dropdown");
 const navSearchBtn = document.querySelector("#nav-search-btn");
 const menuSearchBtn = document.querySelector("#menu-search-btn");
 
+console.log(navSearchBtn);
+
 //! events
 //* toggle nav overlay and menu icons
 let showOverlay = false;
@@ -70,6 +72,25 @@ languageBtn.addEventListener("click", () => {
     languageDropdown.classList.remove("h-full");
     languageDropdown.classList.add("h-0");
   }
+});
+
+//
+let searchInputWidth = "w-[12rem]";
+navSearchBtn.addEventListener("mouseover", () => {
+  navSearchBtn.querySelector("input").classList.remove("w-0");
+  navSearchBtn.querySelector("input").classList.add("w-[12rem]");
+});
+
+navSearchBtn.addEventListener("mouseout", () => {
+  if (document.activeElement !== navSearchBtn.querySelector("input")) {
+    navSearchBtn.querySelector("input").classList.add("w-0");
+    navSearchBtn.querySelector("input").classList.remove("w-[12rem]");
+  }
+});
+
+navSearchBtn.querySelector("input").addEventListener("blur", () => {
+  navSearchBtn.querySelector("input").classList.remove("w-[12rem]");
+  navSearchBtn.querySelector("input").classList.add("w-0");
 });
 
 //! utils
