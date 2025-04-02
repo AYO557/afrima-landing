@@ -239,7 +239,13 @@
             link.getAttribute("href")?.split("/").pop().toLowerCase() ===
             currentPage
           ) {
-            link.classList.add("text-[#3A01AB]");
+            link.classList.add(
+              "text-[#3A01AB]",
+              "lg:bg-[#3A01AB]",
+              "lg:text-white",
+              "lg:p-1",
+              "lg:hover:text-white"
+            );
           }
         });
       });

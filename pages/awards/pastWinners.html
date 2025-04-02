@@ -85,11 +85,362 @@
         </nav>
       </section>
 
-      <section class="px-[16px] py-[30px]">
+      <section
+        class="px-[16px] py-[30px] lg:px-[30px] xl:px-[120px] 2xl:px-[160px]"
+      >
         <div>
           <h1 class="font-bold capitalize text-[#3A01AB] text-[32px]">
             past winners
           </h1>
+        </div>
+        <div class="grid gap-3 lg:flex lg:justify-between">
+          <div class="flex">
+            <div class="border p-2">2021</div>
+            <div class="border p-2">2020</div>
+            <div class="border p-2">2019</div>
+          </div>
+          <div class="capitalize">
+            <select name="" id="" class="p-2 border rounded w-[300px]">
+              <option value="">select a category</option>
+              <option value="afro beats">afro beats</option>
+              <option value="rap">rap</option>
+              <option value="hip pop">hip pop</option>
+              <option value="r&b">r&b</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="hidden px-[30px] py-[60px] lg:flex xl:px-[120px]">
+        <div class="w-[800px] xl:w-[1000px]"></div>
+      </section>
+
+      <section
+        class="px-[16px] py-[30px] flex-col flex items-center gap-5 lg:grid lg:grid-cols-3 lg:px-[30px] lg:py-[60px] xl:px-[120px] 2xl:px-[160px]"
+      >
+        <div
+          class="relative group h-[350px] w-[300px] bg-gradient-to-bl from-[#43C6F3] via-[#953FDC] to-[#43C6F3] flex flex-col p-[30px] cursor-pointer 2xl:w-[350px]"
+        >
+          <h1 class="text-[24px] text-white font-bold">Artist of the Year</h1>
+          <div class="text-[12px] text-white flex flex-col justify-end h-full">
+            <h1 class="text-[16px]">Aye</h1>
+            <p class="font-[600]">Davido (Nigeria)</p>
+          </div>
+
+          <!-- Nominee Card (Initially Hidden) -->
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-white p-5 text-black rounded-lg shadow-lg opacity-0 scale-95 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-90 invisible group-hover:visible"
+            onclick="this.classList.toggle('hidden')"
+          >
+            <div>
+              <h3 class="text-lg font-bold text-[#3A01AB] border-b pb-1">
+                Nominees
+              </h3>
+              <ul class="mt-2 space-y-2 text-gray-700">
+                <li>
+                  <span class="font-bold text-[#3A01AB]"
+                    >Blood on the dance floor</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >OdumoduBlack (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Aye</span><br /><span
+                    class="font-semibold text-yellow-600"
+                    >Davido (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Holy Ghost</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >Omah Lay (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Mateverse</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >Olamide (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Big 7</span><br /><span
+                    class="font-semibold text-yellow-600"
+                    >Burna Boy (Nigeria)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative group h-[350px] w-[300px] bg-gradient-to-bl from-[#43C6F3] via-[#953FDC] to-[#43C6F3] flex flex-col p-[30px] cursor-pointer 2xl:w-[350px]"
+        >
+          <h1 class="text-[24px] text-white font-bold">Artist of the Year</h1>
+          <div class="text-[12px] text-white flex flex-col justify-end h-full">
+            <h1 class="text-[16px]">Aye</h1>
+            <p class="font-[600]">Davido (Nigeria)</p>
+          </div>
+
+          <!-- Nominee Card (Initially Hidden) -->
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-white p-5 text-black rounded-lg shadow-lg opacity-0 scale-95 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-90 invisible group-hover:visible"
+            onclick="this.classList.toggle('hidden')"
+          >
+            <div>
+              <h3 class="text-lg font-bold text-[#3A01AB] border-b pb-1">
+                Nominees
+              </h3>
+              <ul class="mt-2 space-y-2 text-gray-700">
+                <li>
+                  <span class="font-bold text-[#3A01AB]"
+                    >Blood on the dance floor</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >OdumoduBlack (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Aye</span><br /><span
+                    class="font-semibold text-yellow-600"
+                    >Davido (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Holy Ghost</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >Omah Lay (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Mateverse</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >Olamide (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Big 7</span><br /><span
+                    class="font-semibold text-yellow-600"
+                    >Burna Boy (Nigeria)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative group h-[350px] w-[300px] bg-gradient-to-bl from-[#43C6F3] via-[#953FDC] to-[#43C6F3] flex flex-col p-[30px] cursor-pointer 2xl:w-[350px]"
+        >
+          <h1 class="text-[24px] text-white font-bold">Artist of the Year</h1>
+          <div class="text-[12px] text-white flex flex-col justify-end h-full">
+            <h1 class="text-[16px]">Aye</h1>
+            <p class="font-[600]">Davido (Nigeria)</p>
+          </div>
+
+          <!-- Nominee Card (Initially Hidden) -->
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-white p-5 text-black rounded-lg shadow-lg opacity-0 scale-95 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-90 invisible group-hover:visible"
+            onclick="this.classList.toggle('hidden')"
+          >
+            <div>
+              <h3 class="text-lg font-bold text-[#3A01AB] border-b pb-1">
+                Nominees
+              </h3>
+              <ul class="mt-2 space-y-2 text-gray-700">
+                <li>
+                  <span class="font-bold text-[#3A01AB]"
+                    >Blood on the dance floor</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >OdumoduBlack (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Aye</span><br /><span
+                    class="font-semibold text-yellow-600"
+                    >Davido (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Holy Ghost</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >Omah Lay (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Mateverse</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >Olamide (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Big 7</span><br /><span
+                    class="font-semibold text-yellow-600"
+                    >Burna Boy (Nigeria)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative group h-[350px] w-[300px] bg-gradient-to-bl from-[#43C6F3] via-[#953FDC] to-[#43C6F3] flex flex-col p-[30px] cursor-pointer 2xl:w-[350px]"
+        >
+          <h1 class="text-[24px] text-white font-bold">Artist of the Year</h1>
+          <div class="text-[12px] text-white flex flex-col justify-end h-full">
+            <h1 class="text-[16px]">Aye</h1>
+            <p class="font-[600]">Davido (Nigeria)</p>
+          </div>
+
+          <!-- Nominee Card (Initially Hidden) -->
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-white p-5 text-black rounded-lg shadow-lg opacity-0 scale-95 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-90 invisible group-hover:visible"
+            onclick="this.classList.toggle('hidden')"
+          >
+            <div>
+              <h3 class="text-lg font-bold text-[#3A01AB] border-b pb-1">
+                Nominees
+              </h3>
+              <ul class="mt-2 space-y-2 text-gray-700">
+                <li>
+                  <span class="font-bold text-[#3A01AB]"
+                    >Blood on the dance floor</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >OdumoduBlack (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Aye</span><br /><span
+                    class="font-semibold text-yellow-600"
+                    >Davido (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Holy Ghost</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >Omah Lay (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Mateverse</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >Olamide (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Big 7</span><br /><span
+                    class="font-semibold text-yellow-600"
+                    >Burna Boy (Nigeria)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative group h-[350px] w-[300px] bg-gradient-to-bl from-[#43C6F3] via-[#953FDC] to-[#43C6F3] flex flex-col p-[30px] cursor-pointer 2xl:w-[350px]"
+        >
+          <h1 class="text-[24px] text-white font-bold">Artist of the Year</h1>
+          <div class="text-[12px] text-white flex flex-col justify-end h-full">
+            <h1 class="text-[16px]">Aye</h1>
+            <p class="font-[600]">Davido (Nigeria)</p>
+          </div>
+
+          <!-- Nominee Card (Initially Hidden) -->
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-white p-5 text-black rounded-lg shadow-lg opacity-0 scale-95 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-90 invisible group-hover:visible"
+            onclick="this.classList.toggle('hidden')"
+          >
+            <div>
+              <h3 class="text-lg font-bold text-[#3A01AB] border-b pb-1">
+                Nominees
+              </h3>
+              <ul class="mt-2 space-y-2 text-gray-700">
+                <li>
+                  <span class="font-bold text-[#3A01AB]"
+                    >Blood on the dance floor</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >OdumoduBlack (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Aye</span><br /><span
+                    class="font-semibold text-yellow-600"
+                    >Davido (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Holy Ghost</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >Omah Lay (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Mateverse</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >Olamide (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Big 7</span><br /><span
+                    class="font-semibold text-yellow-600"
+                    >Burna Boy (Nigeria)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative group h-[350px] w-[300px] bg-gradient-to-bl from-[#43C6F3] via-[#953FDC] to-[#43C6F3] flex flex-col p-[30px] cursor-pointer 2xl:w-[350px]"
+        >
+          <h1 class="text-[24px] text-white font-bold">Artist of the Year</h1>
+          <div class="text-[12px] text-white flex flex-col justify-end h-full">
+            <h1 class="text-[16px]">Aye</h1>
+            <p class="font-[600]">Davido (Nigeria)</p>
+          </div>
+
+          <!-- Nominee Card (Initially Hidden) -->
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-white p-5 text-black rounded-lg shadow-lg opacity-0 scale-95 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-90 invisible group-hover:visible"
+            onclick="this.classList.toggle('hidden')"
+          >
+            <div>
+              <h3 class="text-lg font-bold text-[#3A01AB] border-b pb-1">
+                Nominees
+              </h3>
+              <ul class="mt-2 space-y-2 text-gray-700">
+                <li>
+                  <span class="font-bold text-[#3A01AB]"
+                    >Blood on the dance floor</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >OdumoduBlack (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Aye</span><br /><span
+                    class="font-semibold text-yellow-600"
+                    >Davido (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Holy Ghost</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >Omah Lay (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Mateverse</span
+                  ><br /><span class="font-semibold text-yellow-600"
+                    >Olamide (Nigeria)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-bold text-[#3A01AB]">Big 7</span><br /><span
+                    class="font-semibold text-yellow-600"
+                    >Burna Boy (Nigeria)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -167,7 +518,13 @@
             link.getAttribute("href")?.split("/").pop().toLowerCase() ===
             currentPage
           ) {
-            link.classList.add("text-[#3A01AB]");
+            link.classList.add(
+              "text-[#3A01AB]",
+              "lg:bg-[#3A01AB]",
+              "lg:text-white",
+              "lg:p-1",
+              "lg:hover:text-white"
+            );
           }
         });
       });
