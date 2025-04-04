@@ -16,7 +16,8 @@ const languageDropdown = document.querySelector("#language-dropdown");
 const navSearchBtn = document.querySelector("#nav-search-btn");
 const menuSearchBtn = document.querySelector("#menu-search-btn");
 
-console.log(navSearchBtn);
+//
+const pageLink = document.querySelector("#page-link");
 
 //! events
 //* toggle nav overlay and menu icons
@@ -97,6 +98,7 @@ navSearchBtn.querySelector("input").addEventListener("blur", () => {
 //* Function to handle menu switching
 function switchMenu(selectedMenuId) {
   menus.forEach((menu) => {
+    console.log(selectedMenuId);
     if (menu.id !== selectedMenuId) {
       menu.classList.add("opacity-0");
       menu.classList.add("invisible");
@@ -124,7 +126,7 @@ function switchSubject(selectedMenuId) {
       matchId = matchId.split("-")[0];
     }
 
-    console.log(matchId);
+    pageLink.setAttribute("href", `/pages/${matchId}`);
 
     if (!subject.id.includes(matchId)) {
       subject.classList.add("opacity-0");
