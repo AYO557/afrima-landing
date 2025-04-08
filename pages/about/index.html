@@ -298,8 +298,10 @@
       </div>
     </nav>
 
-    <main class="flex flex-col gap-10">
-      <article class="h-[80vh] flex justify-center items-center px-40">
+    <main class="flex flex-col">
+      <article
+        class="h-[80vh] flex justify-center items-center 2xl:px-40 lg:px-20"
+      >
         <section
           class="bg-[#3A01AB] h-[80%] w-full flex justify-center items-center gap-10"
         >
@@ -311,8 +313,10 @@
       </article>
 
       <article class="px-40">
-        <section class="flex gap-20">
-          <div class="w-[50%] flex flex-col gap-10 leading-8 tracking-wide">
+        <section class="flex gap-[2rem] items-center pb-10 min-h-[690px]">
+          <div
+            class="w-[50%] lg:text-[0.8rem] 2xl:text-[1.2rem] flex flex-col 2xl:gap-[1rem] h-full justify-center lg:gap-3 xl:gap-5 2xl:gap-10"
+          >
             <p>
               The All Africa Music Awards (AFRIMA) was established in 2014 by
               the International Committee AFRIMA in collaboration with the
@@ -347,44 +351,85 @@
             </p>
           </div>
 
-          <div
-            class="w-[50%] bg-green-500"
-            style="background-image: url(../assets/images/about_gold_mike.svg)"
-          >
+          <div class="w-[50%] h-full">
             <!-- issuses with image size -->
-            <!-- <img
-              class="object-cover w-full max-h-full"
-              src="../assets/images/about_gold_mike.svg"
+            <img
+              class="object-cover w-full h-full"
+              src="../../assets/images/about/about_gold_mike.svg"
               alt=""
-            /> -->
+            />
           </div>
         </section>
       </article>
 
       <article class="bg-[#3A01AB]">
-        <section class="h-[100vh] flex justify-center items-center">
-          <img src="../../assets/" alt="" />
+        <section
+          class="h-[100vh] flex justify-center items-center flex flex-col text-white text-[1.5rem] p-10 gap-10 text-center min-h-[900px]"
+        >
+          <img src="../../assets/icons/Vision.svg" alt="" />
+          <p class="w-[80%] mx-auto">
+            To be the premier platform celebrating and promoting the diverse
+            richness of African music and culture globally, utility artists and
+            fans through a shared appreciation of the continent's vibrant
+            musical heritage.
+          </p>
         </section>
-
-        <section class="h-[100vh] flex justify-center items-center">
-          <img src="../../assets/icons/Mission.svg" alt="" />
-        </section>
-
-        <section class="h-[100vh] flex justify-center items-center">
-          <img src="../../assets/icons/Values.svg" alt="" />
-        </section>
-
-        <section class="h-[100vh] flex justify-center items-center"></section>
 
         <section
-          class="bg-[#BA9D36] py-20 px-80 text-white flex flex-col gap-10"
+          class="h-[100vh] flex justify-center items-center flex flex-col text-white text-[1.5rem] p-10 gap-10 text-center min-h-[900px]"
         >
+          <img src="../../assets/icons/Mission.svg" alt="" />
+          <p class="w-[80%] mx-auto">
+            To honor and promote African musical talent by recognizing
+            excellence in performance, creativity and innovation. We aim to
+            elevate the global presence of African music, support emerging
+            artists, and celebrate the rich cultural diversity of our continent
+          </p>
+          <p class="w-[80%] mx-auto">
+            To create sustainable growth of the African music industry as a
+            contributor to national and continental economies.
+          </p>
+          <p class="w-[80%] mx-auto">
+            To promote and showcase African artistes and their music to the
+            largely untapped African population in Africa and to a global
+            audience as well promote African cities and tourism.
+          </p>
+        </section>
+
+        <section
+          class="h-[100vh] flex justify-center items-center flex flex-col text-white text-[1.5rem] p-10 gap-10 text-center min-h-[900px]"
+        >
+          <img src="../../assets/icons/Values.svg" alt="" />
+
+          <p class="w-[80%] mx-auto">
+            FACE IT is an acronym coined by the International Committee of
+            AFRIMA. It represents the values of the All Africa Music Awards
+            which are: Fairness, Authenticity, Creativity, Equality, Excellence,
+            Integrity and Transparency.
+          </p>
+
+          <p class="w-[80%] mx-auto">
+            The AFRIMA Mantra: "FOR HOPE, FOR CELEBRATION" revolves round the
+            universal power of music as a tool of hope and unity in the African
+            continent despite the challenges we face.
+          </p>
+        </section>
+
+        <section class="pb-10 flex justify-center items-center">
+          <h2
+            class="text-[15.625rem] text-center leading-[100%] font-bold text-[#BA9D36]"
+          >
+            Our Team
+          </h2>
+        </section>
+
+        <section class="bg-[#BA9D36] pt-20 text-white flex flex-col gap-20">
           <h2 class="text-center text-[48px] font-bold">Team</h2>
 
-          <div class="flex flex-col gap-10">
-            <h3 class="text-[32px]">International Executive committee</h3>
+          <div class="flex flex-col gap-10 w-[80%] mx-auto">
+            <h3 class="text-[2rem]">International Executive committee</h3>
 
-            <div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <div class="grid grid-cols-3 gap-4 mx-auto">
               <div class="overflow-hidden shadow-lg">
                 <img
                   src="../../assets/images/commitee_1.svg"
@@ -392,6 +437,7 @@
                   class="w-full h-full object-cover"
                 />
               </div>
+
               <div class="overflow-hidden shadow-lg">
                 <img
                   src="../../assets/images/commitee_1.svg"
@@ -399,6 +445,7 @@
                   class="w-full h-full object-cover"
                 />
               </div>
+
               <div class="overflow-hidden shadow-lg">
                 <img
                   src="../../assets/images/commitee_1.svg"
@@ -406,6 +453,7 @@
                   class="w-full h-full object-cover"
                 />
               </div>
+
               <div class="overflow-hidden shadow-lg">
                 <img
                   src="../../assets/images/commitee_1.svg"
@@ -413,6 +461,7 @@
                   class="w-full h-full object-cover"
                 />
               </div>
+
               <div class="overflow-hidden shadow-lg">
                 <img
                   src="../../assets/images/commitee_1.svg"
@@ -420,6 +469,7 @@
                   class="w-full h-full object-cover"
                 />
               </div>
+
               <div class="overflow-hidden shadow-lg">
                 <img
                   src="../../assets/images/commitee_1.svg"
@@ -427,6 +477,7 @@
                   class="w-full h-full object-cover"
                 />
               </div>
+
               <div class="overflow-hidden shadow-lg">
                 <img
                   src="../../assets/images/commitee_1.svg"
@@ -434,6 +485,7 @@
                   class="w-full h-full object-cover"
                 />
               </div>
+
               <div class="overflow-hidden shadow-lg">
                 <img
                   src="../../assets/images/commitee_1.svg"
@@ -441,6 +493,7 @@
                   class="w-full h-full object-cover"
                 />
               </div>
+
               <div class="overflow-hidden shadow-lg">
                 <img
                   src="../../assets/images/commitee_1.svg"
@@ -448,6 +501,806 @@
                   class="w-full h-full object-cover"
                 />
               </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 9"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 9"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 9"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 9"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 9"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 9"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 9"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-10 w-[80%] mx-auto">
+            <h3 class="text-[2rem]">The Jury</h3>
+
+            <div class="grid grid-cols-3 gap-4 mx-auto">
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 1"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 2"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 3"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 4"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 5"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 6"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 7"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 8"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 9"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 9"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div class="overflow-hidden shadow-lg">
+                <img
+                  src="../../assets/images/commitee_1.svg"
+                  alt="Portrait 9"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <h2 class="text-[15.625rem] text-center font-bold text-[#3A01AB]">
+            Partners
+          </h2>
+        </section>
+
+        <section class="flex flex-col gap-10"></section>
+      </article>
+
+      <article class="bg-[#BA9D36] pt-20 text-white flex flex-col gap-20">
+        <h2 class="text-center text-[48px] font-bold">Team</h2>
+
+        <div class="flex flex-col gap-10 w-[80%] mx-auto">
+          <h3 class="text-[2rem]">International Executive committee</h3>
+
+          <div class="grid grid-cols-3 gap-4 mx-auto">
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 2"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 3"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 4"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 5"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 6"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 7"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 8"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 9"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 9"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 9"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 9"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 9"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 9"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 9"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 9"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-10 w-[80%] mx-auto">
+          <h3 class="text-[2rem]">The Jury</h3>
+
+          <div class="grid grid-cols-3 gap-4 mx-auto">
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 2"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 3"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 4"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 5"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 6"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 7"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 8"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 9"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 9"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 9"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-[15.625rem] text-center font-bold text-[#3A01AB]">
+          Partners
+        </h2>
+      </article>
+
+      <article
+        class="bg-[#3A01AB] py-20 text-white flex flex-col gap-20 px-10 lg:px-20 2xl:px-40"
+      >
+        <h2 class="text-[2rem] font-bold">Afrima Awards Partners</h2>
+
+        <section class="flex flex-col gap-5">
+          <h3 class="font-bold text-[1.5rem]">Old Partners</h3>
+
+          <div class="grid grid-cols-8 lg:gap-5 xl:gap-10">
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="flex flex-col gap-5">
+          <h3 class="font-bold text-[1.5rem]">Gold Partners</h3>
+
+          <div class="grid grid-cols-8 lg:gap-5 xl:gap-10">
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="flex flex-col gap-5">
+          <h3 class="font-bold text-[1.5rem]">Silver Partners</h3>
+
+          <div class="grid grid-cols-8 lg:gap-5 xl:gap-10">
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="overflow-hidden shadow-lg">
+              <img
+                src="../../assets/images/commitee_1.svg"
+                alt="Portrait 1"
+                class="w-full h-full object-cover"
+              />
             </div>
           </div>
         </section>

@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../../index.css" />
+    <script src="../../index.js" type="module" defer></script>
     <style>
       /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
       .hide-scrollbar::-webkit-scrollbar {
@@ -24,25 +25,293 @@
     ></script>
   </head>
   <body>
-    <nav class="flex justify-between px-4 shadow-md text-[#3A01AB]">
-      <div class="flex gap-4">
-        <button>
+    <nav
+      class="relative flex items-center justify-between shadow-md text-[#3A01AB] h-[10vh]"
+    >
+      <div class="flex gap-10 items-center">
+        <button
+          id="menu"
+          class="cursor-pointer h-20 w-20 flex justify-center items-center"
+        >
           <img src="../../assets/icons/menu.svg" alt="" />
+          <img class="hidden" src="../../assets/icons/x.svg" alt="" />
         </button>
         <img src="../../assets/icons/afrima_logo.svg" alt="" />
+
+        <button
+          id="menu-search-btn"
+          class="h-[3rem] flex items-center gap-5 opacity-0 transition-all duration-200"
+        >
+          <img src="../../assets/icons/search.svg" alt="search icon" />
+          <input
+            type="search"
+            placeholder="Type to search"
+            class="w-[12rem] px-1 outline-none border-none"
+          />
+        </button>
       </div>
 
-      <div class="flex gap-4 items-center">
-        <button class="border-x border-gray-300 px-7 h-full hidden lg:flex">
-          <img src="../../assets/icons/search.svg" alt="" />
+      <div class="flex items-center h-full">
+        <button
+          id="nav-search-btn"
+          class="border-x border-gray-300 px-7 h-full flex gap-1 items-center btn-hover transition-all duration-200"
+        >
+          <img class="" src="../../assets/icons/search.svg" alt="" />
+          <input
+            class="px-2 min-h-[2rem] border-none outline-none w-0 transition-all duration-200"
+            type="search"
+          />
         </button>
 
-        <button class="flex items-center gap-2 text-base font-bold px-5">
+        <button
+          id="language-btn"
+          class="relative h-full w-[9rem] flex justify-center items-center gap-2 text-base font-bold px-5 cursor-pointer"
+        >
           <span>English</span>
           <span>
             <img src="../../assets/icons/angle_down.svg" alt="" />
           </span>
+
+          <ul
+            id="language-dropdown"
+            class="absolute top-full right-0 w-full bg-white z-50 flex flex-col text-gray-400 h-0 overflow-hidden transition-all duration-200"
+          >
+            <li class="text-left px-3 py-3 hover:bg-gray-100 cursor-pointer">
+              English
+            </li>
+            <li class="text-left px-3 py-3 hover:bg-gray-100 cursor-pointer">
+              Francais
+            </li>
+          </ul>
         </button>
+      </div>
+
+      <!-- Nav Overlay -->
+      <div
+        id="nav-overlay"
+        class="absolute h-0 w-full bg-white z-10 left-0 top-full overflow-hidden border-y-2 border-gray-300 flex transition-all duration-200"
+      >
+        <menu
+          class="border-r border-gray-300 w-[30%] h-full flex flex-col p-10 text-xl text-black"
+        >
+          <li
+            id="about-us"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>About Us</span>
+            <img src="../../assets/icons/angle_right.svg" alt="" />
+          </li>
+          <li
+            id="awards"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>Awards</span>
+            <img src="../../assets/icons/angle_right.svg" alt="" />
+          </li>
+          <li
+            id="events"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>Events</span>
+            <img src="../../assets/icons/angle_right.svg" alt="" />
+          </li>
+          <li
+            id="media"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>Media</span>
+            <img src="../../assets/icons/angle_right.svg" alt="" />
+          </li>
+          <li
+            id="contact-us"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>Contact Us</span>
+            <img src="../../assets/icons/angle_right.svg" alt="" />
+          </li>
+        </menu>
+
+        <div class="w-[70%] h-full flex text-black">
+          <menu
+            id="about-us_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 transition-all duration-500"
+          >
+            <li>
+              <a class="underline text-black">Our History</a>
+            </li>
+            <li>
+              <a class="underline text-black">Vision, Mission, Values</a>
+            </li>
+            <li>
+              <a class="underline text-black">Team</a>
+            </li>
+            <li>
+              <a class="underline text-black">Partners</a>
+            </li>
+          </menu>
+
+          <menu
+            id="awards_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 opacity-0 invisible transition-all duration-500 hidden"
+          >
+            <li>
+              <a class="underline text-black">Categories</a>
+            </li>
+            <li>
+              <a class="underline text-black">2025 Nominees</a>
+            </li>
+            <li>
+              <a class="underline text-black">How Winners Emerge</a>
+            </li>
+            <li>
+              <a class="underline text-black">Past Winners</a>
+            </li>
+          </menu>
+
+          <menu
+            id="events_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 opacity-0 invisible transition-all duration-500 hidden"
+          >
+            <li class="">
+              <a class="underline text-black">Events Schedule</a>
+            </li>
+            <li>
+              <a class="underline text-black">Afrima Pillars/Projects</a>
+            </li>
+            <li>
+              <a class="underline text-black">Tickets</a>
+            </li>
+          </menu>
+
+          <menu
+            id="media_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 opacity-0 invisible transition-all duration-500 hidden"
+          >
+            <li>
+              <a class="underline text-black">Press Release</a>
+            </li>
+            <li>
+              <a class="underline text-black">Media Accreditation</a>
+            </li>
+            <li>
+              <a class="underline text-black">International Media Committe</a>
+            </li>
+            <li>
+              <a class="underline text-black">Social Media Handles</a>
+            </li>
+          </menu>
+
+          <menu
+            id="contact-us_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 opacity-0 invisible transition-all duration-500 hidden"
+          >
+            <li>
+              <a class="underline text-black">Enquiry Form</a>
+            </li>
+            <li>
+              <a class="underline text-black">Contact Information</a>
+            </li>
+          </menu>
+
+          <div class="w-[50%] h-full bg-[#00000026] p-7">
+            <div
+              id="intro-subjects"
+              class="max-w-[432px] h-full flex flex-col gap-4 mx-auto"
+            >
+              <div
+                id="about-subject"
+                class="flex flex-col gap-4 w-full transition-all duration-200"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../assets/images/nav/about.svg"
+                    alt="a beautiful singer"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">About Us</h2>
+              </div>
+
+              <div
+                id="awards-subject"
+                class="flex flex-col gap-4 w-full opacity-0 invisible transition-all duration-200 hidden"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../assets/images/nav/awards.svg"
+                    alt="a golden microphone"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">Awards</h2>
+              </div>
+
+              <div
+                id="events-subject"
+                class="flex flex-col gap-4 w-full opacity-0 invisible transition-all duration-200 hidden"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../assets/images/nav/events.svg"
+                    alt="a male singer"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">Events</h2>
+              </div>
+
+              <div
+                id="media-subject"
+                class="flex flex-col gap-4 w-full opacity-0 invisible transition-all duration-200 hidden"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../assets/images/nav/media.svg"
+                    alt="a majestic female singer"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">Media</h2>
+              </div>
+
+              <div
+                id="contact-subject"
+                class="flex flex-col gap-4 w-full opacity-0 invisible transition-all duration-200 hidden"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../assets/images/nav/contact.svg"
+                    alt="a native male singer"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">Contact Us</h2>
+              </div>
+
+              <p class="leading-7">
+                The All Africa Music Awards (AFRIMA) is the continent's most
+                prestigious event dedicated to recognizing and celebrating the
+                immense talent and diversity of African music. Established to
+                honor the rich musical heritage of Africa, AFRIMA stands as a
+                beacon of pride for Africa, demonstrating the power of music to
+                unite, inspire, and drive positive change.
+              </p>
+
+              <a id="page-link" href="/pages/about">
+                <button
+                  class="bg-[#3A01AB] py-4 px-10 text-white rounded-lg font-bold"
+                >
+                  Visit Page
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
 
@@ -56,7 +325,7 @@
         <div class="text-[24px] font-semibold uppercase text-white">Awards</div>
       </section>
 
-      <section class="py-[16px] pl-[10px] bg-gray-100 lg:pl-0">
+      <section class="py-[16px] pl-[10px] bg-[#3A01AB0D] lg:pl-0">
         <nav>
           <ul
             class="uppercase flex overflow-x-scroll hide-scrollbar w-full gap-3 text-[12px] md:text-[16px] lg:overflow-x-none md:justify-center lg:gap-[15px]"
@@ -85,72 +354,80 @@
         </nav>
       </section>
 
-      <section class="px-[16px] py-[30px]">
-        <div>
-          <h1 class="font-bold capitalize text-[#3A01AB] text-[32px]">
-            categories
-          </h1>
-        </div>
-      </section>
-
       <section
-        class="py-[64px] px-[24px] bg-gray-100 flex flex-col gap-[30px] lg:grid lg:grid-cols-2"
+        class="lg:w-[95%] 2xl:w-[80%] mx-auto py-[30px] flex flex-col gap-20"
       >
-        <div>
-          <h1 class="text-[24px] font-[500] text-[#3A01AB]">Regional Awards</h1>
-          <ol
-            class="text-[12px] text-[#ba9d3c] list-decimal px-[24px] md:text-[16px]"
-          >
-            <li>Best Female Artiste in Central Africa</li>
-            <li>Best Male Artiste in Central Africa</li>
-            <li>Best Female Artiste in Western Africa</li>
-            <li>Best Male Artiste in Western Africa</li>
-            <li>Best Female Artiste in Eastern Africa</li>
-            <li>Best Male Artiste in Eastern Africa</li>
-            <li>Best Female Artiste in Northern Africa</li>
-            <li>Best Male Artiste in Northern Africa</li>
-            <li>Best Female Artiste in Southern Africa</li>
-            <li>Best Male Artiste in Southern Africa</li>
-          </ol>
-        </div>
-        <div>
-          <h1 class="text-[24px] font-[500] text-[#3A01AB]">
-            Continental awards
-          </h1>
-          <ol
-            class="text-[12px] text-[#ba9d3c] list-decimal px-[24px] md:text-[16px]"
-          >
-            <li>Artiste of the Year</li>
-            <li>African Fans' Favorite</li>
-            <li>Album of the Year</li>
-            <li>Best African Collaboration</li>
-            <li>Best African Contemporary</li>
-            <li>Best African Electro</li>
-            <li>Best African Group/Duo/Band</li>
-            <li>Best African Hip Hop</li>
-            <li>Best African Jazz</li>
-            <li>Best African Pop</li>
-            <li>Best African Reggae/Ragga/Dancehall</li>
-            <li>Best African RnB/Soul</li>
-            <li>Best African Rock</li>
-            <li>Best African Traditional</li>
-            <li>Best Female Inspirational</li>
-            <li>Best Male Inspirational</li>
-            <li>Best African DJ</li>
-            <li>Best African Lyricist/Rapper</li>
-            <li>Best African Act in Diaspora</li>
-            <li>Best African Dance/Choreography</li>
-            <li>AFRIMA Legend Award</li>
-            <li>Most Promising Artiste of the Year</li>
-            <li>Producer of the Year</li>
-            <li>Revelation of the African Continent</li>
-            <li>Song of the Year</li>
-            <li>Songwriter of the Year</li>
-            <li>Video of the Year</li>
-          </ol>
-        </div>
+        <h1 class="font-bold capitalize text-[#3A01AB] text-[2rem]">
+          categories
+        </h1>
+
+        <section
+          class="bg-[#3A01AB0D] lg:p-10 2xl:p-20 flex gap-20 w-[95%] max-h-[100vh]"
+        >
+          <div class="flex flex-col gap-5">
+            <h2
+              class="font-bold text-[#3A01AB] xl:text-[1.5rem] lg:text-[1.2rem]"
+            >
+              Regional awards
+            </h2>
+
+            <ol class="list-decimal text-[#BA9D36] font-medium">
+              <li>Best Female Artiste in Central Africa</li>
+              <li>Best Male Artiste in Central Africa</li>
+              <li>Best Female Artiste in Western Africa</li>
+              <li>Best Male Artiste in Western Africa</li>
+              <li>Best Female Artiste in Eastern Africa</li>
+              <li>Best Male Artiste in Eastern Africa</li>
+              <li>Best Female Artiste in Northern Africa</li>
+              <li>Best Male Artiste in Northern Africa</li>
+              <li>Best Female Artiste in Southern Africa</li>
+              <li>Best Male Artiste in Southern Africa</li>
+            </ol>
+          </div>
+
+          <div class="flex flex-col gap-5">
+            <h2
+              class="font-bold text-[#3A01AB] xl:text-[1.5rem] lg:text-[1.2rem]"
+            >
+              Continental awards
+            </h2>
+
+            <ol
+              class="columns-2 gap-20 break-inside-avoid list-decimal text-[#BA9D36] font-medium"
+            >
+              <li>Artiste of the Year</li>
+              <li>African Fans' Favorite</li>
+              <li>Album of the Year</li>
+              <li>Best African Collaboration</li>
+              <li>Best African Contemporary</li>
+              <li>Best African Electro</li>
+              <li>Best African Group/Duo/Band</li>
+              <li>Best African Hip Hop</li>
+              <li>Best African Jazz</li>
+              <li>Best African Pop</li>
+              <li>Best African Reggae/Ragga/Dancehall</li>
+              <li>Best African RnB/Soul</li>
+              <li>Best African Rock</li>
+              <li>Best African Traditional</li>
+              <li>Best Female Inspirational</li>
+              <li>Best Male Inspirational</li>
+              <li>Best African DJ</li>
+              <li>Best African Lyricist/Rapper</li>
+              <li>Best African Act in Diaspora</li>
+              <li>Best African Dance/Choreography</li>
+              <li>AFRIMA Legend Award</li>
+              <li>Most Promising Artiste of the Year</li>
+              <li>Producer of the Year</li>
+              <li>Revelation of the African Continent</li>
+              <li>Song of the Year</li>
+              <li>Songwriter of the Year</li>
+              <li>Video of the Year</li>
+            </ol>
+          </div>
+        </section>
       </section>
     </main>
+
     <footer class="flex flex-col gap-14 p-10 lg:p-20">
       <div class="flex items-center gap-10">
         <h3 class="font-bold">FOLLOW US</h3>
