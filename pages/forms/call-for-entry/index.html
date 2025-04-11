@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../../../index.css" />
-    <script src="../../../index.js" type="module" defer></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script
       src="https://kit.fontawesome.com/66c56c7221.js"
@@ -316,6 +316,7 @@
         </div>
         <div>
           <form
+            id="entryform"
             class="bg-gray-100 px-[16px] py-[36px] flex flex-col gap-[32px] xl:px-[120px] 2xl:px-[160px]"
           >
             <section class="flex flex-col gap-[16px] md:grid md:grid-cols-2">
@@ -666,6 +667,7 @@
               </div>
             </section>
             <button
+              id="sumbitBtn"
               class="p-[16px] text-[12px] text-white bg-[#3a01ab] uppercase rounded hover:bg-black lg:text-[16px] 2xl:p-[24px]"
             >
               submit
@@ -673,6 +675,48 @@
           </form>
         </div>
       </section>
+      <!-- <section
+        class="absolute h-full w-full top-[10px] flex flex-col justify-center items-center p-[120px]"
+      >
+        <div
+          class="px-[16px] py-[64px] bg-gray-200 flex flex-col items-center z-20 gap-[32px] lg:px-[160px] xl:px-[160px] 2xl:px-[160px]"
+        >
+          <div>
+            <img src="../../../assets/images/afrimaLogoWhite.svg" alt="" />
+          </div>
+          <div class="flex flex-col gap-[30px] text-[#3A01AB]">
+            <p>
+              Congratulations John Doe, Your Entry has been entered and
+              submitted successfully.
+            </p>
+            <p>
+              Do note that unique works within the calender period of Aug 1st
+              2024 to Aug 31st 2025 are eligible for submissions, Read
+              guidelines for more info.
+            </p>
+            <p>
+              To get latest update from AFRIMA stay tuned to the AFRIMA social
+              channels @AFRIMAWARDS FB TW IG YOUTUBE. Email info@afrima.org.  
+            </p>
+            <p>
+              We do encourage you to share submission link with other Artistes,
+              Dj's, Songwriters, Music/Entertainment Journalists, Video
+              Directors, Music Producers, and Dancers from across the African
+              continent and Diaspora. 
+            </p>
+            <p>Thank you.</p>
+          </div>
+          <div>
+            <a href="../../../index.html">
+              <button
+                class="p-[16px] text-[12px] text-white bg-[#3a01ab] uppercase rounded hover:bg-black lg:text-[16px] 2xl:p-[24px]"
+              >
+                go to homepage
+              </button></a
+            >
+          </div>
+        </div>
+      </section> -->
     </main>
 
     <footer class="flex flex-col gap-14 p-10 lg:p-20">
@@ -735,5 +779,103 @@
         </div>
       </div>
     </footer>
+    <script>
+      document
+        .getElementById("sumbitBtn")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // Clear previous errors
+          const inputs = document.querySelectorAll(
+            "#entryform input, #entryform select"
+          );
+          inputs.forEach((input) => {
+            input.style.border = "1px solid transparent";
+          });
+
+          // Helper function to show error
+          function showError(input, message) {
+            input.style.border = "1px solid red";
+            alert(message); // You can use a nicer popup or inline error if preferred
+          }
+
+          // Collect inputs
+          const firstName = inputs[0];
+          const lastName = inputs[1];
+          const countryOrigin = inputs[2];
+          const countryResidence = inputs[3];
+          const region = inputs[4];
+          const postalCode = inputs[5];
+          const address = inputs[6];
+          const phone = inputs[7];
+          const email = inputs[8];
+          const stageName = inputs[9];
+          const albumTitle = inputs[10];
+          const trackTitle = inputs[11];
+          const songLink = inputs[12];
+          const recordLabel = inputs[13];
+          const producer = inputs[14];
+          const songwriter = inputs[15];
+          const year = inputs[16];
+          const regionalCategory = document.querySelectorAll("select")[3];
+          const continentalCategory = document.querySelectorAll("select")[4];
+
+          const requiredFields = [
+            { input: firstName, name: "First Name" },
+            { input: lastName, name: "Last Name" },
+            { input: countryOrigin, name: "Country of Origin" },
+            { input: countryResidence, name: "Country of Residence" },
+            { input: region, name: "Region" },
+            { input: postalCode, name: "Postal Code" },
+            { input: address, name: "Address" },
+            { input: phone, name: "Phone Number" },
+            { input: email, name: "Email Address" },
+            { input: stageName, name: "Stage Name" },
+            { input: albumTitle, name: "Album Title" },
+            { input: trackTitle, name: "Track Title" },
+            { input: songLink, name: "Song Link" },
+            { input: recordLabel, name: "Record Label" },
+            { input: producer, name: "Producer" },
+            { input: songwriter, name: "Songwriter" },
+            { input: year, name: "Year of Recording" },
+            { input: regionalCategory, name: "Regional Category" },
+            { input: continentalCategory, name: "Continental Category" },
+          ];
+
+          // Validate fields
+          for (const field of requiredFields) {
+            if (!field.input.value.trim()) {
+              showError(field.input, `${field.name} is required`);
+              return;
+            }
+          }
+
+          // Validate email
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email.value.trim())) {
+            showError(email, "Enter a valid email address");
+            return;
+          }
+
+          // Validate phone
+          const phoneRegex = /^[0-9+\-\s()]{7,15}$/;
+          if (!phoneRegex.test(phone.value.trim())) {
+            showError(phone, "Enter a valid phone number");
+            return;
+          }
+
+          // Validate song link (basic check)
+          if (
+            !songLink.value.trim().startsWith("http://") &&
+            !songLink.value.trim().startsWith("https://")
+          ) {
+            showError(songLink, "Enter a valid URL for the song link");
+            return;
+          }
+
+          // All validations passed – redirect
+          window.location.href = "success.html"; // change this to your target page
+        });
+    </script>
   </body>
 </html>

@@ -1,3 +1,6 @@
+const form = document.querySelector("#entryform");
+const btn = document.querySelector("#submitBtn");
+
 const menuElem = document.querySelector("#menu");
 const navOverlayElem = document.querySelector("#nav-overlay");
 
@@ -24,6 +27,102 @@ const pageLink = document.querySelector("#page-link");
 //! events
 //* toggle nav overlay and menu icons
 let showOverlay = false;
+
+btn.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent default form submission
+
+  // Clear previous errors
+  const inputs = document.querySelectorAll(
+    "#entryform input, #entryform select"
+  );
+  inputs.forEach((input) => {
+    input.style.border = "1px solid transparent";
+  });
+
+  // Helper function to show error
+  function showError(input, message) {
+    input.style.border = "1px solid red";
+    alert(message); // You can use a nicer popup or inline error if preferred
+  }
+
+  // Collect inputs
+  const firstName = inputs[0];
+  const lastName = inputs[1];
+  const countryOrigin = inputs[2];
+  const countryResidence = inputs[3];
+  const region = inputs[4];
+  const postalCode = inputs[5];
+  const address = inputs[6];
+  const phone = inputs[7];
+  const email = inputs[8];
+  const stageName = inputs[9];
+  const albumTitle = inputs[10];
+  const trackTitle = inputs[11];
+  const songLink = inputs[12];
+  const recordLabel = inputs[13];
+  const producer = inputs[14];
+  const songwriter = inputs[15];
+  const year = inputs[16];
+  const regionalCategory = document.querySelectorAll("select")[3];
+  const continentalCategory = document.querySelectorAll("select")[4];
+
+  const requiredFields = [
+    { input: firstName, name: "First Name" },
+    { input: lastName, name: "Last Name" },
+    { input: countryOrigin, name: "Country of Origin" },
+    { input: countryResidence, name: "Country of Residence" },
+    { input: region, name: "Region" },
+    { input: postalCode, name: "Postal Code" },
+    { input: address, name: "Address" },
+    { input: phone, name: "Phone Number" },
+    { input: email, name: "Email Address" },
+    { input: stageName, name: "Stage Name" },
+    { input: albumTitle, name: "Album Title" },
+    { input: trackTitle, name: "Track Title" },
+    { input: songLink, name: "Song Link" },
+    { input: recordLabel, name: "Record Label" },
+    { input: producer, name: "Producer" },
+    { input: songwriter, name: "Songwriter" },
+    { input: year, name: "Year of Recording" },
+    { input: regionalCategory, name: "Regional Category" },
+    { input: continentalCategory, name: "Continental Category" },
+  ];
+
+  // Validate fields
+  for (const field of requiredFields) {
+    if (!field.input.value.trim()) {
+      showError(field.input, `${field.name} is required`);
+      return;
+    }
+  }
+
+  // Validate email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email.value.trim())) {
+    showError(email, "Enter a valid email address");
+    return;
+  }
+
+  // Validate phone
+  const phoneRegex = /^[0-9+\-\s()]{7,15}$/;
+  if (!phoneRegex.test(phone.value.trim())) {
+    showError(phone, "Enter a valid phone number");
+    return;
+  }
+
+  // Validate song link (basic check)
+  if (
+    !songLink.value.trim().startsWith("http://") &&
+    !songLink.value.trim().startsWith("https://")
+  ) {
+    showError(songLink, "Enter a valid URL for the song link");
+    return;
+  }
+
+  // All validations passed – redirect
+  window.location.href = "../pages/forms/success/index.html"; // change this to your target page
+});
+
 menuElem.addEventListener("click", () => {
   showOverlay = !showOverlay;
   if (showOverlay) {
@@ -147,7 +246,3 @@ function switchSubject(selectedMenuId) {
     }
   });
 }
-
-// slider
-
-//#00000026
