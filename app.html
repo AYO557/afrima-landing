@@ -118,3 +118,201 @@
     </script>
   </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md px-4">
+      <div class="relative">
+        <!-- Slider Items -->
+        <div id="slider" class="overflow-hidden relative">
+          <div
+            class="flex transition-transform duration-500"
+            style="width: 300%"
+          >
+            <!-- Slide 1 -->
+            <div class="w-full flex-shrink-0 p-4">
+              <div
+                class="bg-gradient-to-br from-blue-400 via-purple-500 to-blue-300 p-10 text-white text-xl font-bold rounded-xl"
+              >
+                Artist of the Year
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="w-full flex-shrink-0 p-4">
+              <div
+                class="bg-gradient-to-br from-blue-400 via-purple-500 to-blue-300 p-6 text-white rounded-xl"
+              >
+                <h2 class="text-white font-bold border-b-2 border-white mb-2">
+                  Nominees
+                </h2>
+                <ul class="text-sm">
+                  <li>
+                    <strong>Blood on the dance floor</strong> -
+                    <span class="text-yellow-300">OdumoduBlack</span> (Nigeria)
+                  </li>
+                  <li>
+                    <strong>Aye</strong> -
+                    <span class="text-yellow-300">Davido</span> (Nigeria)
+                  </li>
+                  <li>
+                    <strong>Holy Ghost</strong> -
+                    <span class="text-yellow-300">Omah Lay</span> (Nigeria)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="w-full flex-shrink-0 p-4">
+              <div
+                class="bg-gradient-to-br from-blue-400 via-purple-500 to-blue-300 p-6 text-white rounded-xl"
+              >
+                <h2 class="text-white font-bold border-b-2 border-white mb-2">
+                  Nominees
+                </h2>
+                <ul class="text-sm">
+                  <li>
+                    <strong>Mateverse</strong> -
+                    <span class="text-yellow-300">Olamide</span> (Nigeria)
+                  </li>
+                  <li>
+                    <strong>Big 7</strong> -
+                    <span class="text-yellow-300">Burna Boy</span> (Nigeria)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrows -->
+        <div class="absolute inset-0 flex justify-between items-center px-2">
+          <button id="prev" class="text-purple-800 text-3xl font-bold">
+            &#x276E;
+          </button>
+          <button id="next" class="text-purple-800 text-3xl font-bold">
+            &#x276F;
+          </button>
+        </div>
+      </div>
+
+      <!-- Page Indicator -->
+      <div
+        id="indicator"
+        class="text-center mt-4 font-semibold text-purple-700"
+      >
+        1 / 3
+      </div>
+    </div>
+
+    <script>
+      const slider = document.querySelector("#slider > div");
+      const slides = slider.children.length;
+      let index = 0;
+
+      const updateSlider = () => {
+        slider.style.transform = `translateX(-${index * 100}%)`;
+        document.getElementById("indicator").innerText = `${
+          index + 1
+        } / ${slides}`;
+      };
+
+      document.getElementById("next").onclick = () => {
+        index = (index + 1) % slides;
+        updateSlider();
+      };
+
+      document.getElementById("prev").onclick = () => {
+        index = (index - 1 + slides) % slides;
+        updateSlider();
+      };
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle with Indicator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-2xl px-4">
+      <!-- Clickable Main Card -->
+      <div
+        id="toggleCard"
+        class="cursor-pointer bg-gradient-to-br from-blue-400 via-purple-500 to-blue-300 p-10 text-white text-xl font-bold rounded-xl text-center transition hover:scale-105 duration-300"
+      >
+        Artist of the Year
+      </div>
+
+      <!-- Hidden Nominees Section -->
+      <div id="nominees" class="mt-6 hidden transition-all duration-500">
+        <div
+          class="bg-gradient-to-br from-blue-400 via-purple-500 to-blue-300 p-6 text-white rounded-xl shadow-md"
+        >
+          <h2 class="text-white font-bold border-b-2 border-white mb-2">
+            Nominees
+          </h2>
+          <ul class="text-sm space-y-2">
+            <li>
+              <strong>Blood on the dance floor</strong> -
+              <span class="text-yellow-300">OdumoduBlack</span> (Nigeria)
+            </li>
+            <li>
+              <strong>Aye</strong> -
+              <span class="text-yellow-300">Davido</span> (Nigeria)
+            </li>
+            <li>
+              <strong>Holy Ghost</strong> -
+              <span class="text-yellow-300">Omah Lay</span> (Nigeria)
+            </li>
+            <li>
+              <strong>Mateverse</strong> -
+              <span class="text-yellow-300">Olamide</span> (Nigeria)
+            </li>
+            <li>
+              <strong>Big 7</strong> -
+              <span class="text-yellow-300">Burna Boy</span> (Nigeria)
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Page Indicator -->
+      <div
+        id="indicator"
+        class="text-center mt-4 font-semibold text-purple-700"
+      >
+        1 / 3
+      </div>
+    </div>
+
+    <script>
+      const toggleCard = document.getElementById("toggleCard");
+      const nominees = document.getElementById("nominees");
+      const indicator = document.getElementById("indicator");
+
+      toggleCard.addEventListener("click", () => {
+        nominees.classList.toggle("hidden");
+
+        // Update indicator
+        if (nominees.classList.contains("hidden")) {
+          indicator.textContent = "1 / 3";
+        } else {
+          indicator.textContent = "2 / 3";
+        }
+      });
+    </script>
+  </body>
+</html>

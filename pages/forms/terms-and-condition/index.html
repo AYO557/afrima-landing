@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../index.css" />
+    <script src="../../../index.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/66c56c7221.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav
+      class="relative flex items-center justify-between shadow-md text-[#3A01AB] h-[10vh]"
+    >
+      <div class="flex gap-10 items-center">
+        <button
+          id="menu"
+          class="cursor-pointer h-20 w-20 flex justify-center items-center"
+        >
+          <img src="../../../assets/icons/menu.svg" alt="" />
+          <img class="hidden" src="../../../assets/icons/x.svg" alt="" />
+        </button>
+        <img src="../../../assets/icons/afrima_logo.svg" alt="" />
+
+        <button
+          id="menu-search-btn"
+          class="h-[3rem] flex items-center gap-5 opacity-0 transition-all duration-200"
+        >
+          <img src="../../../assets/icons/search.svg" alt="search icon" />
+          <input
+            type="search"
+            placeholder="Type to search"
+            class="w-[12rem] px-1 outline-none border-none"
+          />
+        </button>
+      </div>
+
+      <div class="flex items-center h-full">
+        <button
+          id="nav-search-btn"
+          class="border-x border-gray-300 px-7 h-full flex gap-1 items-center btn-hover transition-all duration-200"
+        >
+          <img class="" src="../../../assets/icons/search.svg" alt="" />
+          <input
+            class="px-2 min-h-[2rem] border-none outline-none w-0 transition-all duration-200"
+            type="search"
+          />
+        </button>
+
+        <button
+          id="language-btn"
+          class="relative h-full w-[9rem] flex justify-center items-center gap-2 text-base font-bold px-5 cursor-pointer"
+        >
+          <span>English</span>
+          <span>
+            <img src="../../../assets/icons/angle_down.svg" alt="" />
+          </span>
+
+          <ul
+            id="language-dropdown"
+            class="absolute top-full right-0 w-full bg-white z-50 flex flex-col text-gray-400 h-0 overflow-hidden transition-all duration-200"
+          >
+            <li class="text-left px-3 py-3 hover:bg-gray-100 cursor-pointer">
+              English
+            </li>
+            <li class="text-left px-3 py-3 hover:bg-gray-100 cursor-pointer">
+              Francais
+            </li>
+          </ul>
+        </button>
+      </div>
+
+      <!-- Nav Overlay -->
+      <div
+        id="nav-overlay"
+        class="absolute h-0 w-full bg-white z-10 left-0 top-full overflow-hidden border-y-2 border-gray-300 flex transition-all duration-200"
+      >
+        <menu
+          class="border-r border-gray-300 w-[30%] h-full flex flex-col p-10 text-xl text-black"
+        >
+          <li
+            id="about-us"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>About Us</span>
+            <img src="../../../assets/icons/angle_right.svg" alt="" />
+          </li>
+          <li
+            id="awards"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>Awards</span>
+            <img src="../../../assets/icons/angle_right.svg" alt="" />
+          </li>
+          <li
+            id="events"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>Events</span>
+            <img src="../../../assets/icons/angle_right.svg" alt="" />
+          </li>
+          <li
+            id="media"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>Media</span>
+            <img src="../../../assets/icons/angle_right.svg" alt="" />
+          </li>
+          <li
+            id="contact-us"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>Contact Us</span>
+            <img src="../../../assets/icons/angle_right.svg" alt="" />
+          </li>
+        </menu>
+
+        <div class="w-[70%] h-full flex text-black">
+          <menu
+            id="about-us_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 transition-all duration-500"
+          >
+            <li>
+              <a class="underline text-black">Our History</a>
+            </li>
+            <li>
+              <a class="underline text-black">Vision, Mission, Values</a>
+            </li>
+            <li>
+              <a class="underline text-black">Team</a>
+            </li>
+            <li>
+              <a class="underline text-black">Partners</a>
+            </li>
+          </menu>
+
+          <menu
+            id="awards_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 opacity-0 invisible transition-all duration-500 hidden"
+          >
+            <li>
+              <a class="underline text-black">Categories</a>
+            </li>
+            <li>
+              <a class="underline text-black">2025 Nominees</a>
+            </li>
+            <li>
+              <a class="underline text-black">How Winners Emerge</a>
+            </li>
+            <li>
+              <a class="underline text-black">Past Winners</a>
+            </li>
+          </menu>
+
+          <menu
+            id="events_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 opacity-0 invisible transition-all duration-500 hidden"
+          >
+            <li class="">
+              <a class="underline text-black">Events Schedule</a>
+            </li>
+            <li>
+              <a class="underline text-black">Afrima Pillars/Projects</a>
+            </li>
+            <li>
+              <a class="underline text-black">Tickets</a>
+            </li>
+          </menu>
+
+          <menu
+            id="media_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 opacity-0 invisible transition-all duration-500 hidden"
+          >
+            <li>
+              <a class="underline text-black">Press Release</a>
+            </li>
+            <li>
+              <a class="underline text-black">Media Accreditation</a>
+            </li>
+            <li>
+              <a class="underline text-black">International Media Committe</a>
+            </li>
+            <li>
+              <a class="underline text-black">Social Media Handles</a>
+            </li>
+          </menu>
+
+          <menu
+            id="contact-us_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 opacity-0 invisible transition-all duration-500 hidden"
+          >
+            <li>
+              <a class="underline text-black">Enquiry Form</a>
+            </li>
+            <li>
+              <a class="underline text-black">Contact Information</a>
+            </li>
+          </menu>
+
+          <div class="w-[50%] h-full bg-[#00000026] p-7">
+            <div
+              id="intro-subjects"
+              class="max-w-[432px] h-full flex flex-col gap-4 mx-auto"
+            >
+              <div
+                id="about-subject"
+                class="flex flex-col gap-4 w-full transition-all duration-200"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../../assets/images/nav/about.svg"
+                    alt="a beautiful singer"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">About Us</h2>
+              </div>
+
+              <div
+                id="awards-subject"
+                class="flex flex-col gap-4 w-full opacity-0 invisible transition-all duration-200 hidden"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../../assets/images/nav/awards.svg"
+                    alt="a golden microphone"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">Awards</h2>
+              </div>
+
+              <div
+                id="events-subject"
+                class="flex flex-col gap-4 w-full opacity-0 invisible transition-all duration-200 hidden"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../../assets/images/nav/events.svg"
+                    alt="a male singer"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">Events</h2>
+              </div>
+
+              <div
+                id="media-subject"
+                class="flex flex-col gap-4 w-full opacity-0 invisible transition-all duration-200 hidden"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../../assets/images/nav/media.svg"
+                    alt="a majestic female singer"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">Media</h2>
+              </div>
+
+              <div
+                id="contact-subject"
+                class="flex flex-col gap-4 w-full opacity-0 invisible transition-all duration-200 hidden"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../../assets/images/nav/contact.svg"
+                    alt="a native male singer"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">Contact Us</h2>
+              </div>
+
+              <p class="leading-7">
+                The All Africa Music Awards (AFRIMA) is the continent's most
+                prestigious event dedicated to recognizing and celebrating the
+                immense talent and diversity of African music. Established to
+                honor the rich musical heritage of Africa, AFRIMA stands as a
+                beacon of pride for Africa, demonstrating the power of music to
+                unite, inspire, and drive positive change.
+              </p>
+
+              <a id="page-link" href="pages/about">
+                <button
+                  class="bg-[#3A01AB] py-4 px-10 text-white rounded-lg font-bold"
+                >
+                  Visit Page
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section>
+        <div class="hidden md:flex">
+          <img src="../../../assets/images/home_image_4.svg" alt="" />
+        </div>
+        <div class="md:hidden">
+          <img src="../../../assets/images/homeImg4.svg" alt="" />
+        </div>
+      </section>
+      <section
+        class="py-[64px] px-[20px] flex flex-col gap-[64px] lg:px-[34px] xl:px-[120px] 2xl:px-[160px]"
+      >
+        <h1 class="text-[#3A01AB] font-semibold text-[24px] xl:text-[40px]">
+          2025 Afrima Call for Entry
+        </h1>
+        <h2 class="text-[#3A01AB] font-semibold text-[24px] 2xl:text-[32px]">
+          Afrima 2025 Entry Submission Guidlines
+        </h2>
+        <div>
+          <p class="text-[#3A01AB] font-semibold text-[12px] lg:text-[16px]">
+            The Guidelines / Requirements for the 2025 All Africa Music Awards
+            Entry Submission
+          </p>
+          <p class="text-[12px] lg:text-[16px]">
+            The All Africa Music Awards, AFRIMA 2025 is officially open for
+            entries from Artistes, Songwriters, Music/Entertainment Journalists,
+            Video Directors, Music Producers, DJs, and Dancers from across the
+            African continent and Diaspora. The AFRIMA awards is celebrating
+            excellence in musical artistry in Africa and the Diaspora, featuring
+            36 categories across the five regions of Africa and music genre,
+            with a reward of 23.9 carat gold AFRIMA plated trophy.
+          </p>
+        </div>
+        <div>
+          <p class="text-[#3A01AB] text-[12px] font-semibold lg:text-[16px]">
+            The Guidelines / Eligibility / Requirements for the 2025 All Africa
+            Music Awards, AFRIMA Entry Submission
+          </p>
+          <ol class="list-decimal text-[12px] lg:text-[16px]">
+            <li>
+              Entries opens from May 10, 2025 and closes on Aug 1st, 2025.
+            </li>
+            <li>
+              Eligibility: Music professionals of African origin living either
+              on the continent or abroad are eligible.
+            </li>
+            <li>
+              The award is open to Artistes, Songwriters, Video Directors, Music
+              Producers as well as unrecorded artistes.
+            </li>
+            <li>
+              Entries submitted through email to any AFRIMA email address WILL
+              NOT be considered.
+            </li>
+            <li>
+              Artistes / producers / directors / journalists / songwriters must
+              submit their works digitally via AFRIMA website on
+              <a href="https://afrima.org/AFRIMA2019">
+                https://afrima.org/AFRIMA2019,</a
+              >
+            </li>
+            <li>
+              Stay updated from the AFRIMA social channels Twitter, Instagram
+              @AFRIMAWARDS or Facebook: www.facebook.com/afrima Youtube:
+              www.youtube.com/afrima
+            </li>
+            <li>
+              It is strongly advised that you submit your work (s) via online
+              submission, the Entry Registration Form must be carefully and
+              accurately completed and submitted including the relevant URL
+              links for the digital version of the artistic work/writing in the
+              space provided.
+            </li>
+            <li>
+              Forms can be filled in English and French, with Arabic and
+              Portuguese translations available on the form.
+            </li>
+            <li>
+              African artistes must upload and submit their audio or video entry
+              using download links to YouTube or SoundCloud platforms to qualify
+              for nomination in award categories relevant to their artistic
+              work/works.
+            </li>
+            <li>
+              Works to be submitted must be produced in the year under review
+              i.e. August 1, 2018 to August 1st, 2019.
+            </li>
+            <li>
+              For further information, reach out to AFRIMA on social media or
+              other relevant channels of communication.
+            </li>
+          </ol>
+        </div>
+        <div>
+          <h1 class="text-[#3A01AB] font-semibold text-[24px] 2xl:text-[32px]">
+            Terms and Conditions for the AFRIMA 2025 CALL FOR ENTRIES
+          </h1>
+          <ol class="list-decimal text-[12px] lg:text-[16px]">
+            <li>
+              By entering your works each entrant will be deemed to have
+              accepted these terms and conditions and to have agreed to be bound
+              by them.
+            </li>
+            <li>
+              Failure to supply all requested personal information at the time
+              of submitting an entry might result on the entry being invalid.
+            </li>
+            <li>
+              Entries submitted through email to any AFRIMA email address will
+              not be considered.
+            </li>
+            <li>
+              Entries will be deemed to be void if stolen, forged, mutilated or
+              tampered with in any way.
+            </li>
+            <li>
+              Only one entry by online, post will be accepted per category
+              submission.
+            </li>
+            <li>
+              By entering the competition entrants,nominees and winners agree to
+              their names being published and to be photographed and/or
+              interviewed by The Press or AFRIMA and that AFRIMA may use their
+              names and such photographs and/or interviews for publicity
+              purposes.
+            </li>
+            <li>The AFRIMA Trophies are not transferable or exchangeable.</li>
+            <li>
+              All prizes are subject to standard terms and conditions of the
+              company supplying the prizes.
+            </li>
+            <li>
+              AFRIMA is not liable for damage to trophies sent by post or
+              courier.
+            </li>
+            <li>
+              Full details of the prize will be given in writing upon request.
+            </li>
+            <li>
+              Only entries received in the year in review I.e August 1st, 2018
+              to August 1st, 2019 specified in the AFRIMA Calender will be
+              accepted.
+            </li>
+            <li>
+              Winners will be drawn from outcomes of Public and Academy Voting.
+            </li>
+            <li>
+              Winners will be notified as specified in the advertisement and
+              promotions
+            </li>
+            <li>
+              Subject to any applicable law which cannot be excluded, AFRIMA and
+              their employees are not responsible for any loss or damage
+              whatsoever that is suffered (including but not limited to indirect
+              or consequential loss) or for personal injury suffered or
+              sustained during the course of accepting or using the AFRIMA
+              Trophy.
+            </li>
+            <li>
+              Entry is open to Artistes, Songwriters, Video Directors, Music
+              Producers, DJs, and Dancers from across the African continent and
+              Diaspora.
+            </li>
+            <li>
+              The decision of AFRIMA juror and Academy of voters in relation to
+              any aspect of the Awards ceremony is final and no correspondence
+              will be entered into.
+            </li>
+            <li>
+              All entries (name, beat, sound, audio, lyrics, pictures, graphics,
+              colour etc.) becomes the property of AFRIMA and may be used for
+              promotional and marketing purposes.
+            </li>
+            <li>
+              Under the Privacy Act, all individuals have the right to access
+              and correct their personal information by contacting AFRIMA in
+              writing to AFRIMA Secretariat, AFRIMA INFO@AFRIMA.ORG.
+            </li>
+            <li>
+              By agreeing to receive a complimentary subscription to AFRIMA,
+              recipients of any complimentary subscription are deemed to have
+              given AFRIMA consent to contact them.
+            </li>
+          </ol>
+        </div>
+        <div class="flex items-center gap-2">
+          <input
+            type="checkbox"
+            id="termsCheckbox"
+            class="border-[#3A01AB] border-2"
+          />
+          <label for="termsCheckbox" class="text-[12px] lg:text-[16px]"
+            >I agree to the Terms & Conditions</label
+          >
+        </div>
+
+        <div>
+          <button
+            id="submitBtn"
+            class="uppercase text-[12px] text-white bg-[#3A01AB] rounded p-[16px] xl:text-[16px]"
+          >
+            submit entry
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="flex flex-col gap-14 p-10 lg:p-20">
+      <div class="flex items-center gap-10">
+        <h3 class="font-bold">FOLLOW US</h3>
+
+        <div class="flex gap-4 items-center">
+          <span>
+            <img src="./assets/icons/tiktok.svg" alt="" />
+          </span>
+          <span>
+            <img src="./assets/icons/facebook.svg" alt="" />
+          </span>
+          <span>
+            <img src="./assets/icons/twitter.svg" alt="" />
+          </span>
+          <span>
+            <img src="./assets/icons/instagram.svg" alt="" />
+          </span>
+          <span>
+            <img src="./assets/icons/youtube.svg" alt="" />
+          </span>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-5">
+        <div class="lg:flex items-center gap-10">
+          <h4 class="font-medium">2024 Afrima Awards</h4>
+
+          <ul
+            class="flex items-center gap-[8px] text-[12px] lg:text-[16px] text-gray-500"
+          >
+            <a href="./pages/about.html"
+              ><li class="hover:text-[#3A01AB]">About US</li></a
+            >
+            <a href="./pages/awards/categories.html "
+              ><li class="hover:text-[#3A01AB]">Awards</li></a
+            >
+
+            <li>Events</li>
+            <li>Media</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <p
+            class="text-gray-500 text-[12px] tracking-wide w-[95%] lg:text-[16px]"
+          >
+            All Africa Music Awards (AFRIMA) is committed to promoting
+            diversity, equity, and inclusion. We celebrate and honor the
+            creativity and talent of African artists without discrimination
+            based on race, color, age, religion, sex, sexual orientation, gender
+            identity/expression, national origin, or any other characteristic
+            protected under applicable law. We believe in fostering an inclusive
+            environment where all artists can thrive and contribute to the
+            vibrant cultural heritage of Africa.
+          </p>
+          <p class="font-medium">&copy; Created by Juthbag</p>
+        </div>
+      </div>
+    </footer>
+
+    <a href="../success/index.html"></a>
+
+    <script>
+      document
+        .getElementById("submitBtn")
+        .addEventListener("click", function (event) {
+          const termsCheckbox = document.getElementById("termsCheckbox");
+
+          if (!termsCheckbox.checked) {
+            alert("You must agree to the terms and conditions to proceed.");
+            return;
+          }
+
+          // Optional: Add other validation logic here
+
+          // Navigate if all is valid
+          window.location.href = "../success/index.html";
+        });
+    </script>
+  </body>
+</html>

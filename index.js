@@ -19,6 +19,8 @@ const menuSearchBtn = document.querySelector("#menu-search-btn");
 //
 const pageLink = document.querySelector("#page-link");
 
+//
+
 //! events
 //* toggle nav overlay and menu icons
 let showOverlay = false;
@@ -145,5 +147,7 @@ function switchSubject(selectedMenuId) {
     }
   });
 }
+
+// slider
 
 //#00000026
