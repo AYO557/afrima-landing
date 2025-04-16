@@ -9,7 +9,7 @@
   </head>
   <body>
     <nav
-      class="relative flex items-center justify-between shadow-md text-[#3A01AB] h-[10vh]"
+      class="relative hidden sm:flex items-center justify-between shadow-md text-[#3A01AB] h-[10vh]"
     >
       <div class="flex gap-10 items-center">
         <button
@@ -19,7 +19,9 @@
           <img src="../../assets/icons/menu.svg" alt="" />
           <img class="hidden" src="../../assets/icons/x.svg" alt="" />
         </button>
-        <img src="../../assets/icons/afrima_logo.svg" alt="" />
+        <a href="/"
+          ><img src="../../assets/icons/afrima_logo.svg" alt="afrima logo"
+        /></a>
 
         <button
           id="menu-search-btn"
@@ -292,6 +294,132 @@
                   Visit Page
                 </button>
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- mobile nav -->
+    <nav
+      id="mobile-nav"
+      class="relative sm:hidden h-[10vh] flex items-center justify-between pl-[1rem]"
+    >
+      <a href="/"
+        ><img src="../../assets/icons/afrima_logo.svg" alt="afrima logo"
+      /></a>
+
+      <div class="flex items-center p-2 h-full">
+        <div
+          class="flex items-center gap-2 border-x h-full border-gray-300 px-5"
+        >
+          <span class="font-bold text-[#3A01AB]">English</span>
+          <img src="../../assets/icons/angle_down.svg" alt="chevron down" />
+        </div>
+
+        <button
+          id="mobile-menu-btn"
+          class="min-w-[5rem] flex justify-center items-center"
+        >
+          <img src="../../assets/icons/menu.svg" alt="menu" />
+          <img class="hidden" src="../../assets/icons/x.svg" alt="close" />
+        </button>
+      </div>
+
+      <!-- mobile nav overlay -->
+      <div
+        id="mobile-nav-overlay"
+        class="sm:hidden absolute w-full h-0 top-full left-0 bg-white z-10 shadow-2xl overflow-hidden transition-all duration-500"
+      >
+        <div class="flex items-center gap-2 border-b border-gray-300">
+          <span class="p-5 h-full">
+            <img src="../../assets/icons/search.svg" alt="search" />
+          </span>
+          <input
+            type="text"
+            class="border-none outline-none px-5"
+            placeholder="Type to search"
+          />
+        </div>
+
+        <div id="mobile-nav-links">
+          <div
+            id="mobile-about-us"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">About Us</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+
+          <div
+            id="mobile-awards"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Awards</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+
+          <div
+            id="mobile-events"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Events</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+
+          <div
+            id="mobile-media"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Media</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+
+          <div
+            id="mobile-contact-us"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Contact Us</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+        </div>
+
+        <div class="hidden" id="mobile-nav-sublinks">
+          <div class="flex items-center gap-2 border-b border-gray-300">
+            <span class="p-5 border-r border-gray-300">
+              <img src="../../assets//icons/angle_left.svg" alt="" />
+            </span>
+            <span class="font-bold p-2">About Us</span>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <div class="px-5 py-5">
+              <img src="../../assets/images/nav/about.svg" alt="" />
+            </div>
+
+            <h2 class="text-[2rem] font-bold px-5">About Us</h2>
+            <p class="leading-7 px-5">
+              The All Africa Music Awards (AFRIMA) is the continent's most
+              prestigious event dedicated to recognizing and celebrating the
+              immense talent and diversity of African music. Established to
+              honor the rich musical heritage of Africa, AFRIMA stands as a
+              beacon of pride for Africa, demonstrating the power of music to
+              unite, inspire, and drive positive change.
+            </p>
+
+            <button
+              class="bg-[#3A01AB] py-4 text-white rounded-lg font-bold w-[8rem] mx-5"
+            >
+              VISIT PAGE
+            </button>
+
+            <div class="flex flex-col gap-4 px-5 py-2 items-left">
+              <p class="border-b border-gray-300 w-fit">Our History</p>
+              <p class="border-b border-gray-300 w-fit">
+                Vision, Mission, Values
+              </p>
+              <p class="border-b border-gray-300 w-fit">Team</p>
+              <p class="border-b border-gray-300 w-fit">Partners</p>
             </div>
           </div>
         </div>

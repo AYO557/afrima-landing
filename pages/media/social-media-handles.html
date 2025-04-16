@@ -1,0 +1,719 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../../index.js" defer></script>
+    <link rel="stylesheet" href="../../index.css" />
+    <title>Media</title>
+  </head>
+  <body>
+    <nav
+      class="relative hidden sm:flex items-center justify-between shadow-md text-[#3A01AB] h-[10vh]"
+    >
+      <div class="flex gap-10 items-center">
+        <button
+          id="menu"
+          class="cursor-pointer h-20 w-20 flex justify-center items-center"
+        >
+          <img src="../../assets/icons/menu.svg" alt="" />
+          <img class="hidden" src="../../assets/icons/x.svg" alt="" />
+        </button>
+        <a href="/"
+          ><img src="../../assets/icons/afrima_logo.svg" alt="afrima logo"
+        /></a>
+
+        <button
+          id="menu-search-btn"
+          class="h-[3rem] flex items-center gap-5 opacity-0 transition-all duration-200"
+        >
+          <img src="../../assets/icons/search.svg" alt="search icon" />
+          <input
+            type="search"
+            placeholder="Type to search"
+            class="w-[12rem] px-1 outline-none border-none"
+          />
+        </button>
+      </div>
+
+      <div class="flex items-center h-full">
+        <button
+          id="nav-search-btn"
+          class="border-x border-gray-300 px-7 h-full flex gap-1 items-center btn-hover transition-all duration-200"
+        >
+          <img class="" src="../../assets/icons/search.svg" alt="" />
+          <input
+            class="px-2 min-h-[2rem] border-none outline-none w-0 transition-all duration-200"
+            type="search"
+          />
+        </button>
+
+        <button
+          id="language-btn"
+          class="relative h-full w-[9rem] flex justify-center items-center gap-2 text-base font-bold px-5 cursor-pointer"
+        >
+          <span>English</span>
+          <span>
+            <img src="../../assets/icons/angle_down.svg" alt="" />
+          </span>
+
+          <ul
+            id="language-dropdown"
+            class="absolute top-full right-0 w-full bg-white z-50 flex flex-col text-gray-400 h-0 overflow-hidden transition-all duration-200"
+          >
+            <li class="text-left px-3 py-3 hover:bg-gray-100 cursor-pointer">
+              English
+            </li>
+            <li class="text-left px-3 py-3 hover:bg-gray-100 cursor-pointer">
+              Francais
+            </li>
+          </ul>
+        </button>
+      </div>
+
+      <!-- Nav Overlay -->
+      <div
+        id="nav-overlay"
+        class="absolute h-0 w-full bg-white z-10 left-0 top-full overflow-hidden border-y-2 border-gray-300 flex transition-all duration-200"
+      >
+        <menu
+          class="border-r border-gray-300 w-[30%] h-full flex flex-col p-10 text-xl text-black"
+        >
+          <li
+            id="about-us"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>About Us</span>
+            <img src="../../assets/icons/angle_right.svg" alt="" />
+          </li>
+          <li
+            id="awards"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>Awards</span>
+            <img src="../../assets/icons/angle_right.svg" alt="" />
+          </li>
+          <li
+            id="events"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>Events</span>
+            <img src="../../assets/icons/angle_right.svg" alt="" />
+          </li>
+          <li
+            id="media"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>Media</span>
+            <img src="../../assets/icons/angle_right.svg" alt="" />
+          </li>
+          <li
+            id="contact-us"
+            class="px-5 py-7 border-b border-gray-300 flex justify-between cursor-pointer"
+          >
+            <span>Contact Us</span>
+            <img src="../../assets/icons/angle_right.svg" alt="" />
+          </li>
+        </menu>
+
+        <div class="w-[70%] h-full flex text-black">
+          <menu
+            id="about-us_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 transition-all duration-500"
+          >
+            <li>
+              <a class="underline text-black">Our History</a>
+            </li>
+            <li>
+              <a class="underline text-black">Vision, Mission, Values</a>
+            </li>
+            <li>
+              <a class="underline text-black">Team</a>
+            </li>
+            <li>
+              <a class="underline text-black">Partners</a>
+            </li>
+          </menu>
+
+          <menu
+            id="awards_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 opacity-0 invisible transition-all duration-500 hidden"
+          >
+            <li>
+              <a class="underline text-black">Categories</a>
+            </li>
+            <li>
+              <a class="underline text-black">2025 Nominees</a>
+            </li>
+            <li>
+              <a class="underline text-black">How Winners Emerge</a>
+            </li>
+            <li>
+              <a class="underline text-black">Past Winners</a>
+            </li>
+          </menu>
+
+          <menu
+            id="events_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 opacity-0 invisible transition-all duration-500 hidden"
+          >
+            <li class="">
+              <a class="underline text-black">Events Schedule</a>
+            </li>
+            <li>
+              <a class="underline text-black">Afrima Pillars/Projects</a>
+            </li>
+            <li>
+              <a class="underline text-black">Tickets</a>
+            </li>
+          </menu>
+
+          <menu
+            id="media_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 opacity-0 invisible transition-all duration-500 hidden"
+          >
+            <li>
+              <a class="underline text-black">Press Release</a>
+            </li>
+            <li>
+              <a class="underline text-black">Media Accreditation</a>
+            </li>
+            <li>
+              <a class="underline text-black">International Media Committe</a>
+            </li>
+            <li>
+              <a class="underline text-black">Social Media Handles</a>
+            </li>
+          </menu>
+
+          <menu
+            id="contact-us_menu"
+            class="w-[50%] h-full flex flex-col gap-10 p-10 opacity-0 invisible transition-all duration-500 hidden"
+          >
+            <li>
+              <a class="underline text-black">Enquiry Form</a>
+            </li>
+            <li>
+              <a class="underline text-black">Contact Information</a>
+            </li>
+          </menu>
+
+          <div class="w-[50%] h-full bg-[#00000026] p-7">
+            <div
+              id="intro-subjects"
+              class="max-w-[432px] h-full flex flex-col gap-4 mx-auto"
+            >
+              <div
+                id="about-subject"
+                class="flex flex-col gap-4 w-full transition-all duration-200"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../assets/images/nav/about.svg"
+                    alt="a beautiful singer"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">About Us</h2>
+              </div>
+
+              <div
+                id="awards-subject"
+                class="flex flex-col gap-4 w-full opacity-0 invisible transition-all duration-200 hidden"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../assets/images/nav/awards.svg"
+                    alt="a golden microphone"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">Awards</h2>
+              </div>
+
+              <div
+                id="events-subject"
+                class="flex flex-col gap-4 w-full opacity-0 invisible transition-all duration-200 hidden"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../assets/images/nav/events.svg"
+                    alt="a male singer"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">Events</h2>
+              </div>
+
+              <div
+                id="media-subject"
+                class="flex flex-col gap-4 w-full opacity-0 invisible transition-all duration-200 hidden"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../assets/images/nav/media.svg"
+                    alt="a majestic female singer"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">Media</h2>
+              </div>
+
+              <div
+                id="contact-subject"
+                class="flex flex-col gap-4 w-full opacity-0 invisible transition-all duration-200 hidden"
+              >
+                <div class="w-[432px] h-[328px] rounded-lg">
+                  <img
+                    class="w-full h-full object-cover rounded-lg"
+                    src="../../assets/images/nav/contact.svg"
+                    alt="a native male singer"
+                  />
+                </div>
+
+                <h2 class="text-[2rem] font-bold">Contact Us</h2>
+              </div>
+
+              <p class="leading-7">
+                The All Africa Music Awards (AFRIMA) is the continent's most
+                prestigious event dedicated to recognizing and celebrating the
+                immense talent and diversity of African music. Established to
+                honor the rich musical heritage of Africa, AFRIMA stands as a
+                beacon of pride for Africa, demonstrating the power of music to
+                unite, inspire, and drive positive change.
+              </p>
+
+              <a id="page-link" href="/pages/about">
+                <button
+                  class="bg-[#3A01AB] py-4 px-10 text-white rounded-lg font-bold"
+                >
+                  Visit Page
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- mobile nav -->
+    <nav
+      id="mobile-nav"
+      class="relative sm:hidden h-[10vh] flex items-center justify-between pl-[1rem]"
+    >
+      <a href="/"
+        ><img src="../../assets/icons/afrima_logo.svg" alt="afrima logo"
+      /></a>
+
+      <div class="flex items-center p-2 h-full">
+        <div
+          class="flex items-center gap-2 border-x h-full border-gray-300 px-5"
+        >
+          <span class="font-bold text-[#3A01AB]">English</span>
+          <img src="../../assets/icons/angle_down.svg" alt="chevron down" />
+        </div>
+
+        <button
+          id="mobile-menu-btn"
+          class="min-w-[5rem] flex justify-center items-center"
+        >
+          <img src="../../assets/icons/menu.svg" alt="menu" />
+          <img class="hidden" src="../../assets/icons/x.svg" alt="close" />
+        </button>
+      </div>
+
+      <!-- mobile nav overlay -->
+      <div
+        id="mobile-nav-overlay"
+        class="sm:hidden absolute w-full h-0 top-full left-0 bg-white z-10 shadow-2xl overflow-hidden transition-all duration-500"
+      >
+        <div class="flex items-center gap-2 border-b border-gray-300">
+          <span class="p-5 h-full">
+            <img src="../../assets/icons/search.svg" alt="search" />
+          </span>
+          <input
+            type="text"
+            class="border-none outline-none px-5"
+            placeholder="Type to search"
+          />
+        </div>
+
+        <div id="mobile-nav-links">
+          <div
+            id="mobile-about-us"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">About Us</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+
+          <div
+            id="mobile-awards"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Awards</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+
+          <div
+            id="mobile-events"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Events</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+
+          <div
+            id="mobile-media"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Media</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+
+          <div
+            id="mobile-contact-us"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Contact Us</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+        </div>
+
+        <div class="hidden" id="mobile-nav-sublinks">
+          <div class="flex items-center gap-2 border-b border-gray-300">
+            <span class="p-5 border-r border-gray-300">
+              <img src="../../assets//icons/angle_left.svg" alt="" />
+            </span>
+            <span class="font-bold p-2">About Us</span>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <div class="px-5 py-5">
+              <img src="../../assets/images/nav/about.svg" alt="" />
+            </div>
+
+            <h2 class="text-[2rem] font-bold px-5">About Us</h2>
+            <p class="leading-7 px-5">
+              The All Africa Music Awards (AFRIMA) is the continent's most
+              prestigious event dedicated to recognizing and celebrating the
+              immense talent and diversity of African music. Established to
+              honor the rich musical heritage of Africa, AFRIMA stands as a
+              beacon of pride for Africa, demonstrating the power of music to
+              unite, inspire, and drive positive change.
+            </p>
+
+            <button
+              class="bg-[#3A01AB] py-4 text-white rounded-lg font-bold w-[8rem] mx-5"
+            >
+              VISIT PAGE
+            </button>
+
+            <div class="flex flex-col gap-4 px-5 py-2 items-left">
+              <p class="border-b border-gray-300 w-fit">Our History</p>
+              <p class="border-b border-gray-300 w-fit">
+                Vision, Mission, Values
+              </p>
+              <p class="border-b border-gray-300 w-fit">Team</p>
+              <p class="border-b border-gray-300 w-fit">Partners</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main" class="font-sans bg-white">
+      <!-- Hero Section -->
+      <article
+        class="flex flex-col justify-center items-center gap-3 h-[300px] bg-gradient-to-br from-[#43C6F3] via-[#BA9D36] to-[#43C6F3] xl:h-[400px]"
+      >
+        <div>
+          <img src="../../assets/images/afrimaLogoWhite.svg" alt="" />
+        </div>
+        <div class="text-[24px] font-semibold uppercase text-white">Media</div>
+      </article>
+
+      <!-- Sub-Navigation Buttons -->
+      <div
+        class="bg-[#F1F5F9] py-3 sm:py-4 text-gray-500 text-xs sm:text-sm overflow-x-auto whitespace-nowrap"
+      >
+        <div class="flex px-4 md:justify-center min-w-max gap-2 lg:gap-4">
+          <a href="/pages/media/index.html" class="px-1">
+            <button
+              class="px-3 py-2 sm:px-4 sm:py-2.5 rounded-md bg-white hover:bg-[#3A01AB] hover:text-white transition-colors duration-200 cursor-pointer font-medium"
+            >
+              Press Release
+            </button>
+          </a>
+          <a href="/pages/media/accreditation.html" class="px-1">
+            <button
+              class="px-3 py-2 sm:px-4 sm:py-2.5 rounded-md bg-white hover:bg-[#3A01AB] hover:text-white transition-colors duration-200 cursor-pointer font-medium"
+            >
+              Media Accreditation
+            </button>
+          </a>
+          <a href="/pages/media/international-media-committe.html" class="px-1">
+            <button
+              class="px-3 py-2 sm:px-4 sm:py-2.5 rounded-md bg-white hover:bg-[#3A01AB] hover:text-white transition-colors duration-200 cursor-pointer font-medium"
+            >
+              International Media Committee
+            </button>
+          </a>
+          <a href="/pages/media/social-media-handles.html" class="px-1">
+            <button
+              class="px-3 py-2 sm:px-4 sm:py-2.5 rounded-md bg-[#3A01AB] text-white hover:bg-[#2a0080] transition-colors duration-200 cursor-pointer font-medium"
+            >
+              Social Media Handles
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Social Media Handles Section -->
+      <article class="flex justify-center p-4 sm:p-6 lg:p-10">
+        <section
+          class="max-w-[1400px] w-full py-8 sm:py-12 lg:py-20 flex flex-col gap-8 sm:gap-12 lg:gap-16"
+        >
+          <h2
+            class="text-[1.5rem] sm:text-[2rem] lg:text-[2.5rem] font-bold text-[#3A01AB] text-center"
+          >
+            Social Media Handles
+          </h2>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-[1200px] mx-auto"
+          >
+            <!-- TikTok -->
+            <div
+              class="h-[14rem] sm:h-[16rem] lg:h-[17rem] flex flex-col text-center items-center justify-center gap-4 p-4 sm:p-5 bg-white rounded-lg shadow-sm"
+            >
+              <div class="flex items-center gap-2">
+                <img
+                  src="../../assets/icons/media/tiktok.svg"
+                  alt="TikTok Icon"
+                  class="w-6 h-6 sm:w-8 sm:h-8"
+                />
+                <span
+                  class="text-[#3A01AB] font-bold text-lg sm:text-xl lg:text-2xl"
+                >
+                  TikTok
+                </span>
+              </div>
+              <p
+                class="text-[#BA9D36] text-sm sm:text-base leading-relaxed px-2"
+              >
+                Enjoy short, engaging videos that capture the essence of AFRIMA,
+                featuring music clips, artist highlights, and fun challenges.
+              </p>
+            </div>
+
+            <!-- Microphone 1 -->
+            <div
+              class="h-[14rem] sm:h-[16rem] lg:h-[17rem] overflow-hidden rounded-lg"
+            >
+              <img
+                class="w-full h-full object-contain"
+                src="../../assets/images/mike_no_bg.svg"
+                alt="Golden Microphone"
+              />
+            </div>
+
+            <!-- Facebook -->
+            <div
+              class="h-[14rem] sm:h-[16rem] lg:h-[17rem] flex flex-col text-center items-center justify-center gap-4 p-4 sm:p-5 bg-white rounded-lg shadow-sm"
+            >
+              <div class="flex items-center gap-2">
+                <img
+                  src="../../assets/icons/media/facebook.svg"
+                  alt="Facebook Icon"
+                  class="w-6 h-6 sm:w-8 sm:h-8"
+                />
+                <span
+                  class="text-[#3A01AB] font-bold text-lg sm:text-xl lg:text-2xl"
+                >
+                  Facebook
+                </span>
+              </div>
+              <p
+                class="text-[#BA9D36] text-sm sm:text-base leading-relaxed px-2"
+              >
+                Stay updated with our latest posts, live streams, and event
+                announcements.
+              </p>
+            </div>
+
+            <!-- Microphone 2 -->
+            <div
+              class="h-[14rem] sm:h-[16rem] lg:h-[17rem] overflow-hidden rounded-lg"
+            >
+              <img
+                class="w-full h-full object-contain"
+                src="../../assets/images/mike_no_bg.svg"
+                alt="Golden Microphone"
+              />
+            </div>
+
+            <!-- Twitter -->
+            <div
+              class="h-[14rem] sm:h-[16rem] lg:h-[17rem] flex flex-col text-center items-center justify-center gap-4 p-4 sm:p-5 bg-white rounded-lg shadow-sm"
+            >
+              <div class="flex items-center gap-2">
+                <img
+                  src="../../assets/icons/media/twitter.svg"
+                  alt="Twitter Icon"
+                  class="w-6 h-6 sm:w-8 sm:h-8"
+                />
+                <span
+                  class="text-[#3A01AB] font-bold text-lg sm:text-xl lg:text-2xl"
+                >
+                  Twitter
+                </span>
+              </div>
+              <p
+                class="text-[#BA9D36] text-sm sm:text-base leading-relaxed px-2"
+              >
+                Join the conversation using #AFRIMA and stay connected with
+                real-time updates and news.
+              </p>
+            </div>
+
+            <!-- Microphone 3 -->
+            <div
+              class="h-[14rem] sm:h-[16rem] lg:h-[17rem] overflow-hidden rounded-lg"
+            >
+              <img
+                class="w-full h-full object-contain"
+                src="../../assets/images/mike_no_bg.svg"
+                alt="Golden Microphone"
+              />
+            </div>
+
+            <!-- Instagram -->
+            <div
+              class="h-[14rem] sm:h-[16rem] lg:h-[17rem] flex flex-col text-center items-center justify-center gap-4 p-4 sm:p-5 bg-white rounded-lg shadow-sm"
+            >
+              <div class="flex items-center gap-2">
+                <img
+                  src="../../assets/icons/media/instagram.svg"
+                  alt="Instagram Icon"
+                  class="w-6 h-6 sm:w-8 sm:h-8"
+                />
+                <span
+                  class="text-[#3A01AB] font-bold text-lg sm:text-xl lg:text-2xl"
+                >
+                  Instagram
+                </span>
+              </div>
+              <p
+                class="text-[#BA9D36] text-sm sm:text-base leading-relaxed px-2"
+              >
+                Enjoy short, engaging videos that capture the essence of AFRIMA,
+                featuring music clips, artist highlights, and fun challenges.
+              </p>
+            </div>
+
+            <!-- Microphone 4 -->
+            <div
+              class="h-[14rem] sm:h-[16rem] lg:h-[17rem] overflow-hidden rounded-lg"
+            >
+              <img
+                class="w-full h-full object-contain"
+                src="../../assets/images/mike_no_bg.svg"
+                alt="Golden Microphone"
+              />
+            </div>
+
+            <!-- YouTube -->
+            <div
+              class="h-[14rem] sm:h-[16rem] lg:h-[17rem] flex flex-col text-center items-center justify-center gap-4 p-4 sm:p-5 bg-white rounded-lg shadow-sm"
+            >
+              <div class="flex items-center gap-2">
+                <img
+                  src="../../assets/icons/media/youtube.svg"
+                  alt="YouTube Icon"
+                  class="w-6 h-6 sm:w-8 sm:h-8"
+                />
+                <span
+                  class="text-[#3A01AB] font-bold text-lg sm:text-xl lg:text-2xl"
+                >
+                  YouTube
+                </span>
+              </div>
+              <p
+                class="text-[#BA9D36] text-sm sm:text-base leading-relaxed px-2"
+              >
+                Watch live streams, event highlights, interviews, and exclusive
+                video content.
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="flex flex-col gap-14 p-10 lg:p-20 bg-[#F1F5F9]">
+      <div class="flex items-center gap-10">
+        <h3 class="font-bold">FOLLOW US</h3>
+
+        <div class="flex gap-4 items-center">
+          <span>
+            <img src="../../assets/icons/tiktok.svg" alt="" />
+          </span>
+          <span>
+            <img src="../../assets/icons/facebook.svg" alt="" />
+          </span>
+          <span>
+            <img src="../../assets/icons/twitter.svg" alt="" />
+          </span>
+          <span>
+            <img src="../../assets/icons/instagram.svg" alt="" />
+          </span>
+          <span>
+            <img src="../../assets/icons/youtube.svg" alt="" />
+          </span>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-5">
+        <div class="lg:flex items-center gap-10">
+          <h4 class="font-medium">2024 Afrima Awards</h4>
+
+          <ul
+            class="flex items-center gap-[8px] text-[12px] lg:text-[16px] text-gray-500"
+          >
+            <a href="/pages/about.html"
+              ><li class="hover:text-[#3A01AB]">About US</li></a
+            >
+            <a href="/pages/awards/categories.html"
+              ><li class="hover:text-[#3A01AB]">Awards</li></a
+            >
+
+            <li>Events</li>
+            <li>Media</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <p
+            class="text-gray-500 text-[12px] tracking-wide w-[95%] lg:text-[16px]"
+          >
+            All Africa Music Awards (AFRIMA) is committed to promoting
+            diversity, equity, and inclusion. We celebrate and honor the
+            creativity and talent of African artists without discrimination
+            based on race, color, age, religion, sex, sexual orientation, gender
+            identity/expression, national origin, or any other characteristic
+            protected under applicable law. We believe in fostering an inclusive
+            environment where all artists can thrive and contribute to the
+            vibrant cultural heritage of Africa.
+          </p>
+          <p class="font-medium">&copy; Created by Juthbag</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

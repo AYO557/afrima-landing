@@ -9,7 +9,7 @@
   </head>
   <body>
     <nav
-      class="relative flex items-center justify-between shadow-md text-[#3A01AB] h-[10vh]"
+      class="relative hidden sm:flex items-center justify-between shadow-md text-[#3A01AB] h-[10vh]"
     >
       <div class="flex gap-10 items-center">
         <button
@@ -19,7 +19,9 @@
           <img src="../../assets/icons/menu.svg" alt="" />
           <img class="hidden" src="../../assets/icons/x.svg" alt="" />
         </button>
-        <img src="../../assets/icons/afrima_logo.svg" alt="" />
+        <a href="/"
+          ><img src="../../assets/icons/afrima_logo.svg" alt="afrima logo"
+        /></a>
 
         <button
           id="menu-search-btn"
@@ -298,47 +300,193 @@
       </div>
     </nav>
 
+    <!-- mobile nav -->
+    <nav
+      id="mobile-nav"
+      class="relative sm:hidden h-[10vh] flex items-center justify-between pl-[1rem]"
+    >
+      <a href="/"
+        ><img src="../../assets/icons/afrima_logo.svg" alt="afrima logo"
+      /></a>
+
+      <div class="flex items-center p-2 h-full">
+        <div
+          class="flex items-center gap-2 border-x h-full border-gray-300 px-5"
+        >
+          <span class="font-bold text-[#3A01AB]">English</span>
+          <img src="../../assets/icons/angle_down.svg" alt="chevron down" />
+        </div>
+
+        <button
+          id="mobile-menu-btn"
+          class="min-w-[5rem] flex justify-center items-center"
+        >
+          <img src="../../assets/icons/menu.svg" alt="menu" />
+          <img class="hidden" src="../../assets/icons/x.svg" alt="close" />
+        </button>
+      </div>
+
+      <!-- mobile nav overlay -->
+      <div
+        id="mobile-nav-overlay"
+        class="sm:hidden absolute w-full h-0 top-full left-0 bg-white z-10 shadow-2xl overflow-hidden transition-all duration-500"
+      >
+        <div class="flex items-center gap-2 border-b border-gray-300">
+          <span class="p-5 h-full">
+            <img src="../../assets/icons/search.svg" alt="search" />
+          </span>
+          <input
+            type="text"
+            class="border-none outline-none px-5"
+            placeholder="Type to search"
+          />
+        </div>
+
+        <div id="mobile-nav-links">
+          <div
+            id="mobile-about-us"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">About Us</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+
+          <div
+            id="mobile-awards"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Awards</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+
+          <div
+            id="mobile-events"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Events</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+
+          <div
+            id="mobile-media"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Media</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+
+          <div
+            id="mobile-contact-us"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Contact Us</span>
+            <img src="../../assets/icons/angle_right.svg" alt="chevron right" />
+          </div>
+        </div>
+
+        <div class="hidden" id="mobile-nav-sublinks">
+          <div class="flex items-center gap-2 border-b border-gray-300">
+            <span class="p-5 border-r border-gray-300">
+              <img src="../../assets//icons/angle_left.svg" alt="" />
+            </span>
+            <span class="font-bold p-2">About Us</span>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <div class="px-5 py-5">
+              <img src="../../assets/images/nav/about.svg" alt="" />
+            </div>
+
+            <h2 class="text-[2rem] font-bold px-5">About Us</h2>
+            <p class="leading-7 px-5">
+              The All Africa Music Awards (AFRIMA) is the continent's most
+              prestigious event dedicated to recognizing and celebrating the
+              immense talent and diversity of African music. Established to
+              honor the rich musical heritage of Africa, AFRIMA stands as a
+              beacon of pride for Africa, demonstrating the power of music to
+              unite, inspire, and drive positive change.
+            </p>
+
+            <button
+              class="bg-[#3A01AB] py-4 text-white rounded-lg font-bold w-[8rem] mx-5"
+            >
+              VISIT PAGE
+            </button>
+
+            <div class="flex flex-col gap-4 px-5 py-2 items-left">
+              <p class="border-b border-gray-300 w-fit">Our History</p>
+              <p class="border-b border-gray-300 w-fit">
+                Vision, Mission, Values
+              </p>
+              <p class="border-b border-gray-300 w-fit">Team</p>
+              <p class="border-b border-gray-300 w-fit">Partners</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <main id="main">
       <article
         class="flex flex-col justify-center items-center gap-3 h-[300px] bg-gradient-to-br from-[#43C6F3] via-[#BA9D36] to-[#43C6F3] xl:h-[400px]"
       >
         <div>
-          <img src="../../assets/images/afrimaLogoWhite.svg" alt="" />
+          <img
+            src="../../assets/images/afrimaLogoWhite.svg"
+            alt="AFRIMA Logo"
+          />
         </div>
         <div class="text-[24px] font-semibold uppercase text-white">Events</div>
       </article>
 
+      <!-- Responsive navigation buttons -->
       <div
-        class="bg-[#F1F5F9] flex py-2 items-center text-gray-500 justify-center gap-10 text-sm"
+        class="bg-[#F1F5F9] flex py-2 items-center text-gray-500 justify-center sm:gap-10 gap-1 text-sm px-1"
       >
         <a href="/pages/events/index.html"
-          ><button class="p-2 cursor-pointer">EVENTS SCHEDULE</button></a
+          ><button class="sm:p-2 p-1 cursor-pointer">EVENTS SCHEDULE</button></a
         >
         <a href="/pages/events/pillars.html"
-          ><button class="p-2 cursor-pointer">
+          ><button class="sm:p-2 p-1 cursor-pointer">
             AFRIMA PILLARS/PROJECTS
           </button></a
         >
         <a href="/pages/events/tickets.html"
-          ><button class="p-2 bg-[#3A01AB] text-white cursor-pointer">
+          ><button class="sm:p-2 p-1 bg-[#3A01AB] text-white cursor-pointer">
             TICKETS
           </button></a
         >
       </div>
 
-      <article class="flex justify-center gap-10 p-10">
-        <section class="max-w-[1400px] w-full p-20 flex flex-col gap-20">
-          <h2 class="text-[2rem] font-bold text-[#3A01AB]">Tickets</h2>
+      <!-- Main content -->
+      <article class="flex justify-center p-4 sm:p-6 md:p-10">
+        <section
+          class="max-w-[1400px] w-full p-4 sm:p-8 md:p-12 lg:p-20 flex flex-col gap-10 md:gap-16 lg:gap-20"
+        >
+          <h2
+            class="text-xl sm:text-2xl md:text-3xl lg:text-[2rem] font-bold text-[#3A01AB]"
+          >
+            Tickets
+          </h2>
 
-          <div class="flex flex-col gap-5 px-10">
-            <img src="../../assets/images/events/events_schedule.svg" alt="" />
+          <div class="flex flex-col gap-5 px-2 sm:px-5 md:px-10">
+            <!-- Responsive image -->
+            <div class="w-full sm:h-auto h-[300px]">
+              <img
+                src="../../assets/images/events/events_schedule.svg"
+                alt="AFRIMA Tickets"
+                class="w-full h-full object-cover"
+              />
+            </div>
 
-            <div class="flex flex-col gap-5 py-10">
-              <h3 class="text-[#3A01AB] font-bold text-[1.5rem]">
+            <div class="flex flex-col gap-5 py-5 sm:py-8 md:py-10">
+              <h3
+                class="text-[#3A01AB] font-bold text-lg sm:text-xl md:text-[1.5rem]"
+              >
                 Get Your Tickets to Afrima
               </h3>
 
-              <p>
+              <p class="text-sm sm:text-base">
                 Don't miss out on the biggest celebration of African music.
                 Secure your tickets for the AFRIMA events, including the award
                 ceremony, music festival, and more. Find information on ticket
@@ -346,12 +494,14 @@
               </p>
             </div>
 
-            <div class="flex flex-col gap-5 py-10">
-              <h3 class="text-[#3A01AB] font-bold text-[1.5rem]">
+            <div class="flex flex-col gap-5 py-5 sm:py-8 md:py-10">
+              <h3
+                class="text-[#3A01AB] font-bold text-lg sm:text-xl md:text-[1.5rem]"
+              >
                 Ticket Options
               </h3>
 
-              <p>
+              <p class="text-sm sm:text-base">
                 Don't miss out on the biggest celebration of African music.
                 Secure your tickets for the AFRIMA events, including the award
                 ceremony, music festival, and more. Find information on ticket
@@ -361,11 +511,13 @@
 
             <div class="flex flex-col gap-5">
               <div class="flex flex-col gap-3">
-                <h3 class="text-[#3A01AB] font-bold text-[1.2rem]">
+                <h3
+                  class="text-[#3A01AB] font-bold text-base sm:text-lg md:text-[1.2rem]"
+                >
                   Standard Tickets
                 </h3>
 
-                <ul class="list-disc pl-5">
+                <ul class="list-disc pl-5 text-sm sm:text-base">
                   <li>Access to the Award Ceremony</li>
                   <li>General seating for Music Festival</li>
                   <li>Entry to select workshops and panels</li>
@@ -373,11 +525,13 @@
               </div>
 
               <div class="flex flex-col gap-3">
-                <h3 class="text-[#3A01AB] font-bold text-[1.2rem]">
+                <h3
+                  class="text-[#3A01AB] font-bold text-base sm:text-lg md:text-[1.2rem]"
+                >
                   VIP Tickets
                 </h3>
 
-                <ul class="list-disc pl-5">
+                <ul class="list-disc pl-5 text-sm sm:text-base">
                   <li>Premium seating for Award Ceremony and Music Festival</li>
                   <li>Exclusive access to the Gala Dinner and After Party</li>
                   <li>
@@ -388,11 +542,13 @@
               </div>
 
               <div class="flex flex-col gap-3">
-                <h3 class="text-[#3A01AB] font-bold text-[1.2rem]">
-                  VIP Tickets
+                <h3
+                  class="text-[#3A01AB] font-bold text-base sm:text-lg md:text-[1.2rem]"
+                >
+                  Premium VIP Tickets
                 </h3>
 
-                <ul class="list-disc pl-5">
+                <ul class="list-disc pl-5 text-sm sm:text-base">
                   <li>
                     Front-row seating for Award Ceremony and Music Festival
                   </li>
@@ -403,12 +559,14 @@
               </div>
             </div>
 
-            <div class="flex flex-col gap-5 py-5">
-              <h2 class="text-[#3A01AB] font-bold text-[1.5rem]">
+            <div class="flex flex-col gap-5 py-3 sm:py-5">
+              <h2
+                class="text-[#3A01AB] font-bold text-lg sm:text-xl md:text-[1.5rem]"
+              >
                 How to Purchase
               </h2>
 
-              <ol class="list-decimal pl-5">
+              <ol class="list-decimal pl-5 text-sm sm:text-base">
                 <li>
                   Online: Visit our ticketing page and select your preferred
                   ticket option.
@@ -423,8 +581,8 @@
                 </li>
               </ol>
 
-              <div>
-                <p>
+              <div class="text-sm sm:text-base">
+                <p class="mb-2">
                   Early Bird Discount: Get a 10% discount on tickets purchased
                   before [insert date].
                 </p>
@@ -435,8 +593,10 @@
               </div>
             </div>
 
-            <div>
-              <button class="bg-[#3A01AB] text-white py-3 px-10 rounded-lg">
+            <div class="mt-2 sm:mt-4">
+              <button
+                class="bg-[#3A01AB] text-white py-2 sm:py-3 px-6 sm:px-10 rounded-lg text-sm sm:text-base"
+              >
                 BUY TICKETS NOW
               </button>
             </div>

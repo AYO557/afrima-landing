@@ -12,8 +12,10 @@
     ></script>
   </head>
   <body>
+    <!-- Nav -->
     <nav
-      class="relative flex items-center justify-between shadow-md text-[#3A01AB] h-[10vh]"
+      id="nav"
+      class="relative sm:flex hidden items-center justify-between shadow-md text-[#3A01AB] h-[10vh]"
     >
       <div class="flex gap-10 items-center">
         <button
@@ -23,7 +25,9 @@
           <img src="./assets/icons/menu.svg" alt="" />
           <img class="hidden" src="./assets/icons/x.svg" alt="" />
         </button>
-        <img src="./assets/icons/afrima_logo.svg" alt="" />
+        <a href="/"
+          ><img src="../../assets/icons/afrima_logo.svg" alt="afrima logo"
+        /></a>
 
         <button
           id="menu-search-btn"
@@ -296,6 +300,146 @@
                   Visit Page
                 </button>
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- mobile nav -->
+    <nav
+      id="mobile-nav"
+      class="relative sm:hidden h-[10vh] flex items-center justify-between pl-[1rem]"
+    >
+      <a href="/">
+        <img src="../../assets/icons/afrima_logo.svg" alt="AFRIMA Logo" />
+      </a>
+
+      <div class="flex items-center p-2 h-full">
+        <!-- Language Dropdown -->
+        <button
+          id="mobile-language-btn"
+          class="relative flex items-center gap-2 border-x h-full border-gray-300 px-4 text-[#3A01AB] font-bold text-sm"
+          aria-expanded="false"
+          aria-label="Select Language"
+        >
+          <span id="mobile-selected-language">English</span>
+          <img src="./assets/icons/angle_down.svg" alt="Chevron Down" />
+          <ul
+            id="mobile-language-dropdown"
+            class="absolute top-full right-0 w-[100px] bg-white z-50 flex flex-col text-gray-400 h-0 overflow-hidden transition-all duration-200 shadow-md"
+          >
+            <li
+              class="text-left px-3 py-2 hover:bg-gray-100 cursor-pointer text-sm text-[#3A01AB]"
+              data-language="English"
+            >
+              English
+            </li>
+            <li
+              class="text-left px-3 py-2 hover:bg-gray-100 cursor-pointer text-sm text-[#3A01AB]"
+              data-language="Francais"
+            >
+              Francais
+            </li>
+          </ul>
+        </button>
+
+        <!-- Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="min-w-[5rem] flex justify-center items-center"
+        >
+          <img src="./assets/icons/menu.svg" alt="Menu" />
+          <img class="hidden" src="./assets/icons/x.svg" alt="Close" />
+        </button>
+      </div>
+
+      <!-- Mobile Nav Overlay -->
+      <div
+        id="mobile-nav-overlay"
+        class="sm:hidden absolute w-full h-0 top-full left-0 bg-white z-10 shadow-2xl overflow-hidden transition-all duration-500"
+      >
+        <div class="flex items-center gap-2 border-b border-gray-300">
+          <span class="p-5 h-full">
+            <img src="./assets/icons/search.svg" alt="Search" />
+          </span>
+          <input
+            type="text"
+            class="border-none outline-none px-5"
+            placeholder="Type to search"
+          />
+        </div>
+
+        <div id="mobile-nav-links">
+          <div
+            id="mobile-about-us"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">About Us</span>
+            <img src="./assets/icons/angle_right.svg" alt="Chevron Right" />
+          </div>
+          <div
+            id="mobile-awards"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Awards</span>
+            <img src="./assets/icons/angle_right.svg" alt="Chevron Right" />
+          </div>
+          <div
+            id="mobile-events"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Events</span>
+            <img src="./assets/icons/angle_right.svg" alt="Chevron Right" />
+          </div>
+          <div
+            id="mobile-media"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Media</span>
+            <img src="./assets/icons/angle_right.svg" alt="Chevron Right" />
+          </div>
+          <div
+            id="mobile-contact-us"
+            class="flex items-center justify-between border-b border-gray-300 px-5 py-7 link"
+          >
+            <span class="text-lg font-medium">Contact Us</span>
+            <img src="./assets/icons/angle_right.svg" alt="Chevron Right" />
+          </div>
+        </div>
+
+        <div class="hidden" id="mobile-nav-sublinks">
+          <div class="flex items-center gap-2 border-b border-gray-300">
+            <span class="p-5 border-r border-gray-300">
+              <img src="./assets/icons/angle_left.svg" alt="Back" />
+            </span>
+            <span class="font-bold p-2">About Us</span>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="px-5 py-5">
+              <img src="./assets/images/nav/about.svg" alt="About Us Image" />
+            </div>
+            <h2 class="text-[2rem] font-bold px-5">About Us</h2>
+            <p class="leading-7 px-5">
+              The All Africa Music Awards (AFRIMA) is the continent's most
+              prestigious event dedicated to recognizing and celebrating the
+              immense talent and diversity of African music. Established to
+              honor the rich musical heritage of Africa, AFRIMA stands as a
+              beacon of pride for Africa, demonstrating the power of music to
+              unite, inspire, and drive positive change.
+            </p>
+            <button
+              class="bg-[#3A01AB] py-4 text-white rounded-lg font-bold w-[8rem] mx-5"
+            >
+              VISIT PAGE
+            </button>
+            <div class="flex flex-col gap-4 px-5 py-2 items-start">
+              <p class="border-b border-gray-300 w-fit">Our History</p>
+              <p class="border-b border-gray-300 w-fit">
+                Vision, Mission, Values
+              </p>
+              <p class="border-b border-gray-300 w-fit">Team</p>
+              <p class="border-b border-gray-300 w-fit">Partners</p>
             </div>
           </div>
         </div>
@@ -731,7 +875,9 @@
       </section>
     </main>
 
-    <footer class="flex flex-col gap-14 p-10 lg:p-20 bg-[#F1F5F9]">
+    <footer
+      class="flex flex-col gap-14 sm:p-10 py-10 px-2 lg:p-20 bg-[#F1F5F9]"
+    >
       <div class="flex items-center gap-10">
         <h3 class="font-bold">FOLLOW US</h3>
 
